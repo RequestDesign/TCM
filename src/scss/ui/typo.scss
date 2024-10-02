@@ -1,0 +1,94 @@
+.tl1 {
+
+  font-family: 'EuropeExt';
+  font-weight: 400;
+  font-size: 9rem;
+  line-height: 120%;
+
+  @include small-tablet {
+    font-size: 8.4rem;
+  }
+}
+
+.tl2 {
+  font-family: 'EuropeExt';
+  font-weight: 400;
+  font-size: 6rem;
+  line-height: 7rem;
+
+  @include small-tablet {
+    font-size: 4rem;
+    line-height: 2.6rem;
+  }
+}
+
+.txt20 {
+  font-family: 'Euclid Circular A';
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 150%;
+
+  @include small-tablet {
+    font-size: 4rem;
+  }
+}
+
+.txt24 {
+  font-family: 'Euclid Circular A';
+  font-weight: 400;
+  font-size: 2.4rem;
+  line-height: 150%;
+
+  @include small-tablet {
+    font-size: 4.8rem;
+  }
+}
+
+.tl3 {
+  font-family: 'EuropeExt';
+  font-weight: 400;
+  font-size: 2.4rem;
+  line-height: 140%;
+
+  @include small-tablet {
+    font-size: 1.8rem;
+  }
+}
+
+.txt18 {
+  font-family: 'Euclid Circular A';
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 130%;
+
+  @include small-tablet {
+    font-size: 3.6rem;
+  }
+}
+.txt16{
+  font-family: 'Euclid Circular A';
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 130%;
+
+  @include small-tablet {
+    font-size: 3.2rem;
+  }
+}
+
+.txt14 {
+  font-family: 'Euclid Circular A';
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 140%;
+
+  @include small-tablet {
+    font-size: 2.8rem;
+  }
+}
+
+
+
+
+
+// --------------------------------------------------------------------------

@@ -1,0 +1,99 @@
+@import './mixins';
+
+$black: #2B2D32;
+$white: #FFFFFF;
+$gray: #DFDFDF;
+$green: #8BC34A;
+$gray-main: #83898A;
+$bg: #F8F8F8;
+$red: rgba(217, 56, 56, 1);
+
+body {
+  background-color: $bg;
+  color: $black;
+  font-family: 'Geometria';
+
+  .lock & {
+    overflow: hidden;
+    touch-action: none;
+  }
+}
+
+.disable-margin section {
+  margin-top: 6rem !important;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-between;
+  position: relative;
+  // overflow: hidden;
+}
+
+.container {
+  width: 178rem;
+  margin: 0 auto;
+
+  @include small-tablet {
+    width: 100%;
+    margin: 0 3rem;
+  }
+}
+
+
+* {
+  // outline:  1px solid red;
+}
+
+// main
+main {
+  flex-grow: 1;
+
+  section {
+    margin-top: 20rem;
+
+    @include small-tablet {
+      margin-top: 18rem;
+    }
+
+    &:first-of-type {
+      margin-top: 0;
+      padding-top: 20rem;
+      @include small-tablet{
+        padding-top: 18rem;
+      }
+    }
+
+    &._first {
+      margin-top: 3.2rem;
+
+      @include small-tablet {
+        margin-top: 6.4rem;
+      }
+    }
+  }
+}
+
+.desktop {
+  display: block;
+
+  @media (max-width: 48em) {
+    display: none;
+  }
+}
+
+.mobile {
+  display: none;
+
+  @media (max-width: 48em) {
+    display: block;
+  }
+}
+
+@import './ui/ui';
+
+.w-fit{
+  width: fit-content;
+}

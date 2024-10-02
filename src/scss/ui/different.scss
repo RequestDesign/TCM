@@ -1,0 +1,8 @@
+.marked-list {
+    display: block;
+    padding-left: 2.4rem;
+   
+    & li{
+        list-style: url(../../assets/images/icons/list-dot.svg) !important;
+    }
+}

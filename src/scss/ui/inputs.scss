@@ -1,0 +1,103 @@
+.input-text {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+    font-family: 'Euclid Circular A';
+    font-size: 1.8rem;
+    line-height: 2.34rem;
+    @include small-tablet{
+        font-size: 3.4rem;
+        line-height: 4.68rem;
+    }
+
+    &._error {
+        & .input-text-input {
+            & input {
+                color: $red;
+                border-color: $red;
+                &::placeholder{
+                    color: $red;
+                }
+            }
+        }
+        & .form-input-error{
+            color: $red;
+        }
+    }
+
+    &-input {
+        width: 100%;
+        height: 100%;
+        display: flex;
+
+        & input {
+            width: 100%;
+            padding: 2.4rem;
+            border: .2rem solid $gray-main;
+
+            &::placeholder {
+                color: $gray-main;
+            }
+        }
+       
+    }
+    &-error{
+        min-height: 2.3rem;
+    }
+}
+
+
+.checkbox {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+
+
+
+    & input {
+        position: absolute;
+
+        opacity: 0;
+
+        &:checked+.checkbox-check {
+            background-image: url(../../assets/images/icons/checkbox.svg);
+
+           
+        }
+    }
+
+    &._error {
+        color: $red;
+    }
+
+
+    @include small-tablet {
+
+        gap: 2rem;
+    }
+
+    &-check {
+      
+        display: flex;
+        width: 2.4rem;
+        height: 2.4rem;
+        flex-shrink: 0;
+        border: .2rem solid $green;
+        flex-shrink: 0;
+       border: .2rem solid $green;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        @include small-tablet {
+            width: 4rem;
+            height: 4rem;
+        }
+
+       
+    }
+
+}
