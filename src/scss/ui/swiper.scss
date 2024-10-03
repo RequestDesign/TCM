@@ -12,18 +12,40 @@
         width: 9.6rem;
         height: 9.6rem;
     }
+   @media (hover:hover){
     &:hover{
         background-color: $green;
     }
+   }
+    
     &-prev{
         background-image: url(../../assets/images/icons/arrow-swiper-left.svg);
         &:active{
             background-position: 20% 50% ;
+            background-color: $green;
         }
     }
     &-next{
         &:active{
             background-position: 80% 50% ;
+            background-color: $green;
         }
     }
+    &-container{
+        display: flex;
+        gap: 1rem;
+        @include small-tablet{
+            gap: 2rem;
+        }
+        & .swiper-btn-next{
+            margin-top: 2rem;
+        }
+    }
+    &:disabled{
+        background-color: $gray;
+        cursor: default;
+    }
+}
+.swiper{
+    width: 100%;
 }

@@ -1,0 +1,111 @@
+.footer {
+    padding: 20rem 0 8rem;
+    background-color: $white;
+    position: relative;
+    @include small-tablet{
+        padding: 18rem 0 6.6rem;
+    }
+
+
+    &__c {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-template-rows: 1fr;
+        justify-content: space-between;
+        padding: 3rem 0;
+        gap: 7rem 0;
+
+        @include small-tablet {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+        }
+
+
+        &-logo {
+            width: 19.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: .2rem solid $gray;
+            transition: border-color .5s;
+            @include small-tablet{
+                border: none;
+                width: 30rem;
+            }
+
+            & svg {
+                width: 90%;
+            max-height: 100%;
+                transition: fill .5s;
+
+                & g>path:nth-child(2) {
+                    transition: fill .5s, stroke .5s;
+
+                }
+            }
+
+            &:hover {
+
+                & svg {
+                    fill: $gray-main;
+
+                    & g>path:nth-child(2) {
+                        fill: $green;
+                        stroke: $green;
+                    }
+                }
+            }
+        }
+
+        &-nav {
+            display: flex;
+            height: 100%;
+        }
+
+        &-desk-right {
+            display: flex;
+            gap: 2.4rem;
+
+            & .btn-tr svg path {
+                transition: stroke .5s;
+            }
+
+            & .btn-tr:hover svg path {
+                stroke: $black;
+            }
+        }
+        & .mobile{
+            @include small-tablet{
+                display: flex;
+                flex-direction: column;
+                gap: 3rem;
+            }
+           
+        }
+
+        & .btn-tr {
+            padding: 3.3rem;
+        }
+
+        &-bottom {
+
+            display: flex;
+            justify-content: space-between;
+            grid-column: 1 / span 3;
+
+            @include small-tablet {
+                grid-column: 1;
+            }
+
+            &-sign svg {
+                height: 5.6rem;
+            }
+
+        }
+
+    }
+
+}

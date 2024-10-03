@@ -1,0 +1,29 @@
+.heading{
+ 
+    &__c{
+        display: flex;
+        flex-direction: column;
+        &-top{
+           padding-top: 44rem; 
+           max-width: 90rem;
+           text-transform: uppercase;
+        }
+        &-bottom{
+          padding-top: 28rem;
+            margin-left: auto;
+            width: fit-content;
+            @include small-tablet{
+                padding-top: 46rem;
+                margin-left: 0;
+            }
+            & p{
+                white-space: pre-line;
+                font-weight: 600;
+                @include small-tablet{
+                    font-size: 3rem;
+                   
+                }
+            }
+        }
+    }
+}

@@ -3,13 +3,7 @@
     align-items: center;
     width: fit-content;
 
-    &:hover img {
-        margin-left: 1.7rem;
-
-        @include small-tablet {
-            margin-left: 2.4rem;
-        }
-    }
+    
 
     & img {
         margin-left: 1rem;
@@ -29,6 +23,7 @@
 
 .btn-green,
 .btn-white, .btn-tr {
+    width: fit-content;
     display: flex;
     align-items: center;
     padding: 4rem;
@@ -65,10 +60,10 @@
 }
 /*  */
 .btn-tr{
-    border-color: $gray;
+    border-color: $gray-main;
     color: $white;
     &:hover{
-        border-color: $white;
+        border-color: $gray;
         color: $black;
     }
 }

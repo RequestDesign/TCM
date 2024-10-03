@@ -1,0 +1,122 @@
+.contact-us {
+    position: relative;
+    min-height: 80rem;
+    box-shadow: 40rem 0px 23rem -14rem $bg inset;
+
+
+    @include small-tablet {
+        box-shadow: none;
+        padding:8rem 4rem ;
+        box-sizing: border-box;
+    }
+
+    &__bg {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        overflow: hidden;
+        position: absolute;
+        z-index: -1;
+        top: 0;
+            left: 0;
+        
+
+        & img {
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    &__c {
+        display: grid;
+        grid-template-columns: 1.1fr .5fr;
+        gap: 4rem 9.7rem;
+        grid-auto-rows: auto;
+        padding-top: 12rem;
+        box-sizing: border-box;
+
+        @include small-tablet {
+            grid-template-columns: 100%;
+            background-color: rgba(255, 255, 255, 0.7);
+           padding: 4rem;
+         
+           
+        }
+
+        &-aside {
+            grid-column: 2;
+            grid-row: 1 / span 2;
+            align-self: center;
+            font-family: EuropeExt;
+
+            @include small-tablet {
+                grid-column: 1;
+                grid-row: 2;
+                color: $black;
+                font-size: 2.8rem;
+            }
+        }
+
+        &-form {
+            background: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+                linear-gradient(28.39deg, rgba(255, 255, 255, 0) 55.69%, rgba(255, 255, 255, 0.3) 81.78%);
+            margin-top: 4rem;
+            margin-bottom: 15rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            grid-auto-rows: min-content;
+            padding: 4rem;
+
+            @include small-tablet {
+                background: none;
+                grid-template-columns: 100%;
+              margin: 0;
+             padding: 0;
+             gap: 2rem;
+            }
+
+            &-row {
+                grid-column: 1 / span 2;
+
+                @include small-tablet {
+                    grid-column: 1;
+                }
+            }
+
+            &-toleft {
+                justify-self: flex-end;
+                @include small-tablet{
+                    justify-self: center;
+                }
+            }
+            & .checkbox{
+                @include small-tablet{
+                    margin-top: 4rem;
+                    
+                }
+            }
+
+            & .flex-row {
+                margin-top: 5rem;
+                @include small-tablet{
+                    margin:0 auto 4rem ;
+                    &:first-of-type{
+                        margin-top: 8rem;
+                    }
+                }
+            }
+            & button[type='submit']{
+                @include small-tablet{
+                    width: 100%;
+                    border-color: $gray-main;
+                    justify-content: center;
+                }
+               
+            }
+
+        }
+
+    }
+
+}

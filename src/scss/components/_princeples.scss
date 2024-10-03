@@ -1,0 +1,55 @@
+.princeples{
+    display: flex;
+    flex-direction: column;
+    & .section-bg{
+     @include small-tablet{
+        min-height: 120rem;
+     }   
+    }
+    &__top{
+        display: flex;
+        & .tl2{
+            margin-top: 29%;
+            white-space: pre-line;
+            width: fit-content;
+            color: $white;
+            @include small-tablet{
+                margin-top: 60%;
+            }
+        }
+    }
+   
+    &__bottom{
+        display: flex;
+        justify-content: center;
+        gap: 6.5rem;
+        @include small-tablet{
+            flex-direction: column;
+           
+        }
+        &-item{
+            display: flex;
+            flex-direction: column;
+            gap: 1.6rem;
+            align-items: center;
+            text-align: center;
+            &-count{
+                color: $green;
+                font-family: EuropeExt;
+                font-size: 9rem;
+                font-weight: 400;
+                line-height: 120%;
+                text-align: center;
+                
+            }
+            & p {
+                white-space: pre-line;
+            }
+            & .tl3{
+                @include small-tablet{
+                    font-size: 4rem;
+                }
+            }
+        }
+    }
+}

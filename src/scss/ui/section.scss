@@ -1,0 +1,111 @@
+.section-heading {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-auto-rows: min-content min-content;
+    grid-template-areas:
+        'name ttl'
+        'name body';
+    gap: 9rem;
+
+    @include small-tablet {
+        grid-template-columns: 100%;
+        grid-template-areas:
+            'name'
+            'ttl'
+            'body';
+        gap: 4rem;
+    }
+
+    &-name {
+        grid-area: name;
+        font-family: 'Euclid Circular A';
+        font-size: 3.2rem;
+        line-height: 130%;
+        color: $green;
+        font-weight: 500;
+        flex-shrink: 0;
+
+    }
+
+    &-ttl {
+        grid-area: ttl;
+        white-space: pre-line;
+        text-transform: uppercase;
+    }
+
+    &-body {
+        grid-area: body;
+        white-space: pre-line;
+        margin-bottom: 9rem;
+        font-family: Euclid Circular A;
+        font-size: 4rem;
+        font-weight: 400;
+        line-height: 120%;
+        text-align: left;
+
+    }
+}
+
+.section-bg {
+    width: 100%;
+    position: relative;
+    min-height: 90vh;
+    box-shadow: 0px -26rem 13.5rem -8.2rem $bg inset;
+
+    @include small-tablet {
+        box-shadow: 0px -33rem 13.5rem -8.2rem $bg inset;
+    }
+
+    &-img {
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+
+        & img {
+            object-fit: cover;
+            height: 100%;
+
+        }
+    }
+}
+
+.section-heading-swiper {
+    display: grid;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10rem;
+    grid-template-columns: auto auto auto;
+    grid-template-areas: 'nav name loadmore';
+
+    & .nav {
+        grid-area: nav;
+    }
+
+    & .name {
+        grid-area: name;
+
+        @include small-tablet {
+            text-align: center;
+        }
+    }
+
+    & .loadmore {
+        grid-area: loadmore;
+        font-family: 'EuropeExt';
+        @include small-tablet{
+            font-size: 2.8rem;
+        }
+    }
+
+
+    @include small-tablet {
+        grid-template-columns: auto auto;
+        grid-template-areas:
+            'name name'
+            'loadmore nav';
+        gap: 8rem;
+        margin-bottom: 3rem;
+    }
+}

@@ -14,11 +14,11 @@
   font-family: 'EuropeExt';
   font-weight: 400;
   font-size: 6rem;
-  line-height: 7rem;
+  line-height: 120%;
 
   @include small-tablet {
     font-size: 4rem;
-    line-height: 2.6rem;
+   
   }
 }
 
@@ -65,14 +65,15 @@
     font-size: 3.6rem;
   }
 }
-.txt16{
+
+.txt16 {
   font-family: 'Euclid Circular A';
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 130%;
 
   @include small-tablet {
-    font-size: 3.2rem;
+    font-size: 3.6rem;
   }
 }
 
@@ -84,6 +85,10 @@
 
   @include small-tablet {
     font-size: 2.8rem;
+
+    &_small {
+      font-size: 2rem;
+    }
   }
 }
 

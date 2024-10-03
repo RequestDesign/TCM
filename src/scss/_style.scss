@@ -36,10 +36,6 @@ body {
   width: 178rem;
   margin: 0 auto;
 
-  @include small-tablet {
-    width: 100%;
-    margin: 0 3rem;
-  }
 }
 
 
@@ -60,9 +56,10 @@ main {
 
     &:first-of-type {
       margin-top: 0;
-      padding-top: 20rem;
-      @include small-tablet{
-        padding-top: 18rem;
+
+      /* padding-top: 20rem; */
+      @include small-tablet {
+        /*  padding-top: 18rem; */
       }
     }
 
@@ -94,6 +91,49 @@ main {
 
 @import './ui/ui';
 
-.w-fit{
+.w-fit {
   width: fit-content;
+}
+
+
+.col {
+  &-wh {
+    color: $white;
+  }
+
+  &-blk {
+    color: $black;
+  }
+
+  &-grn {
+    color: $green;
+  }
+
+  &-gr {
+    color: $gray-main;
+  }
+}
+
+.txt-up {
+  text-transform: uppercase;
+}
+
+.flex-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  @include small-tablet {
+    gap: 2rem;
+  }
+
+  & img,
+  & svg {
+    max-width: 2.4rem;
+    max-height: 2.4rem;
+    @include small-tablet{
+      max-width: 4.8rem;
+      max-height: 4.8rem;
+    }
+  }
 }

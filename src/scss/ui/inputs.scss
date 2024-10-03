@@ -20,9 +20,7 @@
                 }
             }
         }
-        & .form-input-error{
-            color: $red;
-        }
+      
     }
 
     &-input {
@@ -38,11 +36,18 @@
             &::placeholder {
                 color: $gray-main;
             }
+            &:focus{
+                border-color: $green;
+            }
         }
        
     }
     &-error{
         min-height: 2.3rem;
+        color: $red;
+        @include small-tablet{
+            min-height: 4.6rem;
+        }
     }
 }
 
@@ -53,6 +58,7 @@
     display: flex;
     align-items: center;
     gap: 1rem;
+    flex-shrink: 0;
 
 
 
@@ -86,7 +92,7 @@
         height: 2.4rem;
         flex-shrink: 0;
         border: .2rem solid $green;
-        flex-shrink: 0;
+     
        border: .2rem solid $green;
         background-position: center;
         background-repeat: no-repeat;
