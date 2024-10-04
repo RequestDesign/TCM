@@ -1,6 +1,6 @@
 import $ from 'jquery'
 import Swiper from 'swiper'
-import { Navigation, Pagination } from 'swiper/modules'
+import { Grid, Navigation, Pagination } from 'swiper/modules'
 import { rem } from '../utils/constants'
 import initForms from '../utils/forms'
 
@@ -8,6 +8,7 @@ import initForms from '../utils/forms'
 $(function () {
     initSwipers()
     initForms()
+    modalsHandler()
 })
 
 function initSwipers() {
@@ -40,16 +41,17 @@ function initSwipers() {
         })
 
     }
-    const lastNews = document.querySelector('.news');
+    const lastNews = document.querySelector('.last-news');
     if (lastNews) {
         new Swiper(lastNews.querySelector('.swiper'), {
-            modules: [Navigation],
+            modules: [Navigation, Grid],
             loop: false,
             slidesPerView: 1,
             spaceBetween: rem(3),
             breakpoints: {
                 768: {
-                    slidesPerView: 3
+                    slidesPerView: 3,
+                   
                 }
             },
             navigation: {
@@ -60,3 +62,37 @@ function initSwipers() {
     }
 }
 
+function modalsHandler() {
+
+
+    const modalOpeners = $('.modal-opener'),
+        modalClosers = $('.modal-closer'),
+        html = $('html')
+
+
+    if (!modalOpeners || !modalClosers) return
+
+    modalOpeners.on('click', (ev) => {
+        const { modal } = ev.currentTarget.dataset
+
+        $(`.modal-${modal}`)
+            .fadeIn()
+            .addClass('_opened')
+        html.addClass('lock')
+    })
+
+
+    modalClosers.on('click', (ev) => {
+        const { classList } = ev.target
+        if (!classList.contains('modal-closer')) return
+
+        if (classList.contains('modal')) {
+            $(ev.target).fadeOut().removeClass('_opened')
+
+        } else {
+            $(ev.target.closest('.modal')).fadeOut().removeClass('_opened')
+
+        }
+        html.removeClass('lock')
+    })
+}

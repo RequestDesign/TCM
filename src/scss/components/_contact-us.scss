@@ -91,6 +91,7 @@
                 }
             }
             & .checkbox{
+                align-self: center;
                 @include small-tablet{
                     margin-top: 4rem;
                     

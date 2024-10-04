@@ -1,9 +1,32 @@
+/* main */
 @import '../components/header';
 @import '../components/footer';
 @import '../components/contact-us';
 @import '../components/heading';
-@import '../components/news';
+@import '../components/last-news';
 @import '../components/our-projects';
-@import '../components/partners';
-@import '../components/princeples';
+@import '../components/our-way';
+/* main */
+
+
+
+/* components */
+@import '../components/clients';
+@import '../components/card-news';
+@import '../components/card-project';
+@import '../components/modals';
+/* components */
+
+/* by page */
+@import '../components/main';
+@import '../components/about';
+@import '../components/career';
+@import '../components/news-detail';
+@import '../components/news';
+@import '../components/not-found';
+@import '../components/news-detail';
+@import '../components/projects';
+@import '../components/projects-detail';
+@import '../components/recomendation';
 @import '../components/services';
+/* by page */

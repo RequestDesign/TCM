@@ -10,18 +10,94 @@
 
 <body>
   <div class="wrapper">
-     <include src="./components/_header.html"></include> 
+    <include src="./components/_header.html"></include>
     <main>
-      <include src="./components/_heading.html"></include> 
-      <include src="./components/_partners.html"></include> 
-      <include src="./components/_our-projects.html"></include> 
-      <include src="./components/_services.html"></include> 
-      <include src="./components/_princeples.html"></include> 
-      <include src="./components/_news.html"></include> 
-      <include src="./components/_contact-us.html"></include> 
+      <include src="./components/_heading.html"></include>
+      <!--  -->
+      <section class="main our-way">
+        <div class="container our-way__c">
+          <div class="section-heading">
+            <p class="section-heading-name">Наш подход</p>
+            <h2 class="tl2 section-heading-ttl">ответственное
+              отношение и высокий уровень
+              качества предоставляемых услуг
+            </h2>
+            <p class="section-heading-body">Благодаря этому мы успешно реализовали огромное
+              количество интересных проектов для крупных российских
+              и международных компаний
+            </p>
+          </div>
+          <include src="./components/_clients.html"></include>
+
+        </div>
+      </section>
+      <!--  -->
+      <include src="./components/_our-projects.html"></include>
+      <!--  -->
+      <section class="main services">
+        <div class="container services__c">
+
+          <div class="section-heading">
+            <p class="section-heading-name">Услуги</p>
+            <h2 class="tl2 section-heading-ttl">выполняем полный
+              комплекс услуг
+            </h2>
+            <p class="section-heading-body">ТСМ выполняет комплекс строительно-монтажных и отделочных
+              работ по организации офиса в классах А, В на разных стадиях
+              проекта (Shell&Core, Design& Build, Renovation)
+            </p>
+
+          </div>
+          <div class="services__c-list">
+            <p class="tl2">01</p>
+            <p class="tl2">Проектирование</p>
+            <hr>
+            <p class="tl2">02</p>
+            <p class="tl2">Строительство</p>
+            <hr>
+            <p class="tl2">03</p>
+            <p class="tl2">Эксплуатация</p>
+          </div>
+
+        </div>
+      </section>
+      <!--  -->
+      <section class="main princeples ">
+        <div class="section-bg">
+          <div class="section-bg-img">
+            <img src="../assets/images/principles.webp" alt="section-bg">
+          </div>
+          <div class="container princeples__top">
+            <h2 class="tl2 txt-up">НадЁжность
+              и профессионализм:
+              наши принципы в строительстве </h2>
+          </div>
+        </div>
+        <ul class="container princeples__bottom">
+          <li class="princeples__bottom-item">
+            <p class="princeples__bottom-item-count">364</p>
+            <p class="tl3 txt-up">Профессиональные
+              мастера и рабочие</p>
+          </li>
+          <li class="princeples__bottom-item">
+            <p class="princeples__bottom-item-count">51</p>
+            <p class="tl3 txt-up">Человек в инженерно-
+              техническом отделе</p>
+          </li>
+          <li class="princeples__bottom-item">
+            <p class="princeples__bottom-item-count">230</p>
+            <p class="tl3 txt-up">Реализованных
+              проектов</p>
+          </li>
+        </ul>
+      </section>
+      <!--  -->
+      <include src="./components/_news.html"></include>
+      <include src="./components/_contact-us.html"></include>
 
     </main>
-    <include src="./components/_footer.html"></include> 
+    <include src="./components/_footer.html"></include>
+    <include src="./components/_modals.html"></include>
   </div>
 
 

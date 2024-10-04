@@ -1,0 +1,202 @@
+.modal {
+       display: none;
+    position: fixed;
+    background: rgba(27, 27, 27, 0.4);
+    backdrop-filter: blur(1rem);
+    &._opened{
+        & .modal-c{
+            transform: translateY(0);
+        }
+    }
+
+    &-wrp {
+      
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100vw;
+        height: 100vh;
+
+    }
+
+    &-close {
+        @include same-size(4rem, 4rem);
+        margin-left: auto;
+        background-image: url(../../assets/images/icons/x-modal.svg);
+        background-position: center;
+        background-size: 50%;
+        background-repeat: no-repeat;
+
+        &:hover {
+            opacity: .8;
+        }
+
+    }
+
+    &-c {
+        transform: translateY(-100%);
+        transition: transform .5s;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 2rem 2rem 5rem 5rem;
+        box-sizing: border-box;
+        border: 1px solid;
+        border-image-source: linear-gradient(107.94deg, rgba(255, 255, 255, 0.4) 7.06%, rgba(255, 255, 255, 0.6) 88.97%);
+        background-color: rgba(159, 159, 159, 0.7);
+        box-shadow: 0px 0px 65px 0px rgba(0, 0, 0, 0.25);
+
+        @include small-tablet {
+            width: 100%;
+            padding: 1.4rem;
+            margin: 3rem;
+
+        }
+
+
+
+    }
+
+    &-ttl {
+        font-family: EuropeExt;
+        font-size: 4.4rem;
+        font-weight: 400;
+        line-height: 120%;
+        text-align: center;
+        width: 72rem;
+        text-transform: uppercase;
+        cursor: default;
+
+        @include small-tablet {
+            margin-top: 10rem;
+            font-size: 4.1rem;
+            width: 100%;
+        }
+
+    }
+
+    &-txt {
+        cursor: default;
+        width: 45rem;
+
+        @include small-tablet {
+            width: 100%;
+            font-size: 3.2rem;
+            text-align: center;
+        }
+    }
+
+    &-commercial {
+        z-index: 199;
+
+        &__c {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            justify-content: center;
+            align-items: center;
+
+
+
+
+            &-links {
+                display: flex;
+                gap: 1.2rem;
+
+                @include small-tablet {
+                    gap: 3rem;
+                    margin-bottom: 10rem;
+                }
+
+                & a {
+                    cursor: pointer;
+                    display: flex;
+                    width: 5.6rem;
+                    height: 5.6rem;
+
+
+                    & img {
+                        object-fit: cover;
+                        width: 100%;
+                    }
+
+
+
+
+                }
+            }
+
+        }
+    }
+
+    &-callback {
+        z-index: 200;
+
+        &__c {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem 2.4rem;
+            grid-auto-rows: auto;
+            min-width: 124rem;
+            @include small-tablet{
+                grid-template-columns: 100%;
+                min-width: auto;
+                width: 100%;
+            }
+
+            &-row {
+                @include desktop {
+                    justify-self: center;
+                    grid-column: 1 / span 2;
+                }
+            }
+            &-toright{
+                @include desktop{
+                    justify-self: flex-end;
+                }
+              
+            }
+            & .modal-ttl{
+                margin-top: 0;
+            }
+           
+            & .modal-txt{
+                margin-bottom: 4rem;
+            }
+            & input{
+                border-color: $gray;
+                color: $gray;
+                &::placeholder{
+                    color: $gray;
+                }
+            }
+            & button[type='submit']{
+                border-color: $gray;
+                margin-bottom: 5rem;
+                @include small-tablet{
+                    width: 100%;
+                    justify-content: center;
+                }
+                & svg{
+                   transition: stroke .5s;
+                }
+                &:hover svg{
+                    stroke: $black;
+                }
+            }
+            & .checkbox{
+                align-self: center;
+                margin-bottom: 4rem;
+            }
+            & .flex-row{
+                @include small-tablet{
+                    justify-content: center;
+                }
+            }
+            
+        }
+    }
+
+
+}

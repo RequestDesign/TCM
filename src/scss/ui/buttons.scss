@@ -3,7 +3,7 @@
     align-items: center;
     width: fit-content;
 
-    
+
 
     & img {
         margin-left: 1rem;
@@ -22,7 +22,8 @@
 }
 
 .btn-green,
-.btn-white, .btn-tr {
+.btn-white,
+.btn-tr {
     width: fit-content;
     display: flex;
     align-items: center;
@@ -35,11 +36,11 @@
 
     & img,
     & svg {
-        width: 3.2rem;
-        height: 3.2rem;
+        @include same-size(3.1rem, 3.1rem);
     }
 
 }
+
 /*  */
 .btn-green {
     border-color: $gray;
@@ -48,6 +49,7 @@
 .btn-green:hover {
     background-color: $green;
 }
+
 /*  */
 .btn-white {
     color: $white;
@@ -58,13 +60,14 @@
     background-color: $white;
     color: $black;
 }
+
 /*  */
-.btn-tr{
+.btn-tr {
     border-color: $gray-main;
     color: $white;
-    &:hover{
+
+    &:hover {
         border-color: $gray;
         color: $black;
     }
 }
-

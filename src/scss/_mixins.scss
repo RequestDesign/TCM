@@ -16,12 +16,16 @@
   }
 }
 
-@mixin sizes($width, $height) {
-  max-width: $width;
-  width: 100%;
-  height: $height;
+@mixin same-size($w, $h) {
+  width: $w;
+  height: $h;
 
-  @content;
+  @include small-tablet {
+    width: $w * 2;
+    height: $h * 2;
+  }
+
+
 }
 
 @mixin wrap-text($lines) {
@@ -34,5 +38,5 @@
   -webkit-box-orient: vertical;
   line-clamp: $lines;
   box-orient: vertical;
-  @content;
+ 
 }
