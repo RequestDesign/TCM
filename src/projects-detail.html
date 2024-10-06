@@ -9,10 +9,104 @@
 </head>
 
 <body>
-  <div class="wrapper">
+  <div class="wrapper bg-wh">
     <include src="./components/_header.html"></include>
-    <main>
-        <h1 class="tl1">Проекты детальная</h1>
+    <main class="bg-wh">
+      <section class="projects-detail projects-detail-top">
+
+        <div class="swiper">
+          <div class="bread-overlay bread_white">
+            <include src="./components/_bread.html"></include>
+          </div>
+
+          <ul class="swiper-wrapper">
+            <li class="swiper-slide">
+              <img src="./assets/images/contact-us.webp" alt="project">
+            </li>
+            <li class="swiper-slide">
+              <img src="./assets/images/principles.webp" alt="project">
+            </li>
+            <li class="swiper-slide">
+              <img src="./assets/images/projects.webp" alt="project">
+            </li>
+          </ul>
+        </div>
+
+        <div class="container projects-detail-top__info">
+          <h1 class="tl2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis, corporis!</h1>
+
+          <div class="desktop">
+            <div class="container projects-detail-top__info-nav">
+              <button class="swiper-btn swiper-btn-prev"></button>
+              <button class="swiper-btn swiper-btn-next"></button>
+            </div>
+          </div>
+
+        </div>
+        <hr>
+        <ul class="container projects-detail-top__stats">
+          <li class="projects-detail-top__stats-e">
+            <p class="tl3 txt-up">Год реализации</p>
+            <p class="projects-detail-top__stats-e-data">2021</p>
+          </li>
+          <li class="projects-detail-top__stats-e">
+            <p class="tl3 txt-up">Площадь объекта</p>
+            <p class="projects-detail-top__stats-e-data">615 кв.м.</p>
+          </li>
+          <li class="projects-detail-top__stats-e">
+            <p class="tl3 txt-up">Адрес</p>
+            <p class="projects-detail-top__stats-e-data">Технопарк, просп. Андропова, 18, корп. 5, Москва, Россия</p>
+          </li>
+        </ul>
+      </section>
+      <section class="projects-detail projects-detail-main">
+        <div class="container projects-detail-main__c">
+          <div class="projects-detail-main__c-imgs">
+
+            <div class="projects-detail-main__c-imgs-e">
+              <img src="./assets/images/projects.webp" alt="qwe">
+            </div>
+
+            <div class="projects-detail-main__c-imgs-e projects-detail-main__c-imgs-e_overlay">
+              <img src="./assets/images/news.webp" alt="qwe">
+            </div>
+
+          </div>
+          <div class="projects-detail-main__c-txt">
+            <p class="txt18">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Beatae consequuntur magni officia quam ullam
+              quas harum velit voluptate magnam amet possimus, dolorem explicabo ut accusamus fuga. Dicta quis animi
+              voluptatibus quia facere tempore veniam aut ipsa, aliquam natus quo iure cumque ipsum, ut aperiam corporis
+              possimus similique incidunt quisquam totam neque repellat repellendus voluptatem. Placeat, nisi unde
+              nesciunt tempora incidunt maxime doloremque est laborum! Necessitatibus minima tenetur eveniet quisquam
+              dolore incidunt autem eligendi quis, deserunt neque, quam, aliquam unde ipsa totam consectetur fugit alias
+              minus impedit! Veritatis assumenda odio est corrupti quis? Asperiores saepe non esse sint minima repellat,
+              necessitatibus accusamus rerum facere aut modi cum fugiat a consectetur eos impedit ullam alias
+              laboriosam. Accusantium ab cumque doloremque veniam, quasi, quam voluptatum adipisci ullam totam,
+              laudantium doloribus nisi fuga exercitationem. Natus odit corporis minima, laudantium labore adipisci
+              officia ipsum provident assumenda? Asperiores at nemo, animi, illum voluptate voluptatum cumque beatae
+              earum id, eum provident. Porro quam rerum esse. Laboriosam at obcaecati molestias, neque repellendus cum
+              quae assumenda illum labore asperiores quo aperiam voluptate minus animi quia, nobis nisi ex reprehenderit
+              hic consequatur, quam fuga libero maiores. Itaque fugit nam eius alias, eveniet eaque labore libero! Harum
+              culpa eligendi sint qui.
+            </p>
+
+          </div>
+        </div>
+      </section>
+      <section class="projects-detail projects-detail-imgs">
+        <ul class="container projects-detail-imgs__c">
+          <li class="projects-detail-imgs__c-e">
+            <img src="./assets/images/projects.webp" alt="img">
+          </li>
+          <li class="projects-detail-imgs__c-e">
+            <img src="./assets/images/news.webp" alt="img">
+          </li>
+          <li class="projects-detail-imgs__c-e">
+            <img src="./assets/images/heading.webp" alt="img">
+          </li>
+        </ul>
+      </section>
 
     </main>
     <include src="./components/_footer.html"></include>

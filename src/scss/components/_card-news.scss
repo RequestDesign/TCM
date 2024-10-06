@@ -1,0 +1,105 @@
+.card-news {
+    padding-top: 4rem;
+    border-top: .1rem solid $gray;
+    display: grid;
+    grid-template-columns: 60rem auto;
+    width: 100%;
+    gap: 1.9rem 6.3rem;
+    @include small-tablet{
+        grid-template-columns: 100%;
+    }
+
+    &__date {
+        grid-column: 1 / span 2;
+
+        @include small-tablet {
+            grid-column: 1;
+        }
+    }
+
+    &__img {
+        display: flex;
+        
+        height: 43rem;
+        grid-column: 1;
+        grid-row: 2 / span 2;
+
+        @include small-tablet {
+            height: 50rem;
+            grid-row: 2;
+        }
+
+        & img {
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+        &-body{
+            &-text._closed{
+                @include small-tablet{
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    display: -moz-box;
+                    -moz-box-orient: vertical;
+                    display: -webkit-box;
+                    -webkit-line-clamp: 8;
+                    -webkit-box-orient: vertical;
+                    line-clamp: 8;
+                    box-orient: vertical;
+                }
+              
+               
+            }
+        }
+    }
+
+    &__link {
+        grid-column: 2;
+        display: flex;
+        align-self: flex-end;
+        justify-self: flex-end;
+        font-family: EuropeExt;
+
+        & img, & svg{
+            transform: rotate(-90deg);
+        }
+
+        @include small-tablet {
+            display: none;
+
+        }
+
+
+    }
+    &__loadmore{
+        @include desktop{
+            display: none;
+        }
+        margin-top: 3rem;
+        grid-column: 2;
+        display: flex;
+        align-self: flex-end;
+        justify-self: flex-end;
+        font-family: EuropeExt;
+        padding-right:6rem;
+
+        background-image: url(../../assets/images/icons/arrow-down-green.svg);
+        background-position: right;
+        background-repeat: no-repeat;
+        background-size: contain;
+        
+        &._opened{
+        background-image: url(../../assets/images/icons/arrow-up-green.svg);
+
+        }
+
+        & img, & svg{
+            transform: rotate(-90deg);
+        }
+    }
+}

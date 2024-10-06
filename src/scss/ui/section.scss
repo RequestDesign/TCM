@@ -49,7 +49,8 @@
 .section-bg {
     width: 100%;
     position: relative;
-    min-height: 100rem;
+    height: 85vh;
+    max-height: 150rem;
     box-shadow: 0px -26rem 13.5rem -8.2rem $bg inset;
 
     @include small-tablet {
@@ -67,6 +68,16 @@
             object-fit: cover;
             height: 100%;
 
+        }
+    }
+
+   
+    & .container {
+        display: flex;
+        flex-direction: column;
+        padding-top: 15rem;
+        @include small-tablet{
+            padding-top: 20rem;
         }
     }
 }
@@ -94,7 +105,8 @@
     & .loadmore {
         grid-area: loadmore;
         font-family: 'EuropeExt';
-        @include small-tablet{
+
+        @include small-tablet {
             font-size: 2.8rem;
         }
     }

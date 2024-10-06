@@ -1,0 +1,97 @@
+.select {
+    position: relative;
+
+    &._opened {
+        & .select__items {
+            max-height: 100vh;
+        }
+    }
+
+
+
+    &__target {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 1.4rem 2rem;
+  
+
+        &-arrow {
+            transition: all .5s;
+            border: 1rem solid transparent;
+            border-bottom: 1rem solid $green;
+            border-top: 0rem solid $green ;
+
+            @include small-tablet {
+                border: 2rem solid transparent;
+                border-bottom: 2rem solid $green;
+                border-top: 0rem solid $green ;
+            }
+        }
+
+        &._opened {
+            & .select__target-arrow {
+                border-bottom: 0rem solid $green;
+                border-top: 1rem solid $green ;
+                @include small-tablet{
+                    border-bottom: 0rem solid $green;
+                    border-top: 2rem solid $green ;  
+                }
+            }
+        }
+    }
+
+    &__items {
+        position: absolute;
+        z-index: 10;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: all .5s;
+
+
+        &-list {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            background-color: $white;
+            border-radius: 0 0 .3rem .3rem;
+
+            &-e {
+                padding: 1.6rem 2rem;
+                border-bottom: 1px solid $bg;
+
+                &:disabled {
+                    color: $gray-main;
+                    background-color: $white !important;
+                    cursor: default;
+                }
+
+                &:hover {
+                    background-color: $gray;
+                }
+
+            }
+        }
+    }
+
+
+}
+
+
+.select-default {
+    padding: 1.4rem 2rem;
+    box-sizing: border-box;
+    background-color: transparent;
+    border: .2rem solid $gray-main;
+    min-width: 29.1rem;
+
+    &:hover,
+    & :focus {
+        outline: none;
+        background-color: $white;
+    }
+}

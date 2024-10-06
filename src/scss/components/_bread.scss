@@ -1,0 +1,41 @@
+.bread{
+    overflow-x: auto;
+    &__list{
+        display: flex;
+        flex-wrap: nowrap;
+        gap: .8rem;
+        &-item{
+            color: $gray-main;
+            &::after{
+                content: '/';
+                margin-left: .8rem;
+            }
+            &:hover{
+                color: $green;
+            }
+
+            &_current{
+                color: $black;
+                &::after{
+                    display: none;
+                }
+            }
+
+        }
+    }
+    &-overlay{
+        position: absolute;
+        z-index: 50;
+        top: 20rem;
+        left:10%;
+    }
+    &_white{
+        & .bread__list-item{
+            color: $gray;
+        }
+        & .bread__list-item_current{
+            color: $white;
+        }
+    }
+
+}

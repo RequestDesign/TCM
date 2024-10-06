@@ -1,0 +1,41 @@
+.projects {
+    background-color: $white;
+
+    display: flex;
+    flex-direction: column;
+
+    & .tl1 {
+        margin: 3.2rem 0 10rem;
+
+        @include small-tablet {
+            margin: 4rem 0 8rem;
+        }
+    }
+
+    &-select {
+        margin-left: auto;
+        width: fit-content;
+        @include small-tablet{
+            margin-left: 0;
+        }
+    }
+
+    &__items {
+        display: flex;
+        flex-direction: column;
+        gap: 8rem;
+        width: 100%;
+
+        &-list {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(3, 57.3rem);
+            grid-auto-rows:  1fr;
+            gap: 8rem 3rem;
+            @include small-tablet{
+                grid-template-columns: 100%;
+            }
+        }
+    }
+
+}

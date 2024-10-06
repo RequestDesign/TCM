@@ -12,7 +12,41 @@
   <div class="wrapper">
     <include src="./components/_header.html"></include>
     <main>
-        <h1 class="tl1">Проекты</h1>
+      <section class="projects">
+        <div class="container">
+          <include src="./components/_bread.html"></include>
+          <h1 class="tl1 txt-up">Наши проекты</h1>
+          <div class="projects-select select drop-down-container">
+            <button class="select__target drop-down-target">
+              <input class="select__target-input txt16" type="text" readonly name="choice one"
+                value="Сначала новые">
+              <span class="select__target-arrow"></span>
+            </button>
+            <div class="select__items">
+              <div class="select__items-list">
+                <button class="select__items-list-e txt16" disabled>Сначала новые</button>
+                <button class="select__items-list-e txt16">Сначала старые</button>
+              </div>
+
+            </div>
+
+          </div>
+          <div class="projects__items">
+            <ul class="projects__items-list">
+              <include src="./components/_card-project.html"></include>
+              <include src="./components/_card-project.html"></include>
+              <include src="./components/_card-project.html"></include>
+              <include src="./components/_card-project.html"></include>
+            </ul>
+            <button class="loadMore">
+              Загрузить еще
+              <img src="./assets/images/icons/arrow-down-green.svg" alt="V">
+            </button>
+
+          </div>
+
+        </div>
+      </section>
 
     </main>
     <include src="./components/_footer.html"></include>

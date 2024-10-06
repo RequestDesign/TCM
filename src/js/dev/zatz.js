@@ -1,6 +1,6 @@
 import $ from 'jquery'
 import Swiper from 'swiper'
-import { Grid, Navigation, Pagination } from 'swiper/modules'
+import { Grid, Navigation, Pagination, Autoplay, EffectFade } from 'swiper/modules'
 import { rem } from '../utils/constants'
 import initForms from '../utils/forms'
 
@@ -9,6 +9,9 @@ $(function () {
     initSwipers()
     initForms()
     modalsHandler()
+    dropDowns()
+    initSelect()
+    reviewOpener()
 })
 
 function initSwipers() {
@@ -48,10 +51,11 @@ function initSwipers() {
             loop: false,
             slidesPerView: 1,
             spaceBetween: rem(3),
+            grid: { rows: 2, fill: 'row' },
             breakpoints: {
                 768: {
                     slidesPerView: 3,
-                   
+                    grid: { rows: 1 },
                 }
             },
             navigation: {
@@ -59,6 +63,46 @@ function initSwipers() {
                 nextEl: lastNews.querySelector('.swiper-btn-next'),
             }
         })
+    }
+    const projectsDetail = document.querySelector('.projects-detail-top')
+    if (projectsDetail) {
+        new Swiper(projectsDetail.querySelector('.swiper'), {
+            loop: true,
+            modules: [Navigation, Autoplay, EffectFade],
+            slidesPerView: 1,
+            fadeEffect: {
+                crossFade: true
+            },
+            effect: "fade",
+            spaceBetween: rem(3),
+            autoplay: true,
+            navigation: {
+                prevEl: projectsDetail.querySelector('.swiper-btn-prev'),
+                nextEl: projectsDetail.querySelector('.swiper-btn-next'),
+            }
+
+
+        })
+
+    }
+    const cardProject = document.querySelectorAll('.card-project')
+    if (cardProject) {
+        cardProject.forEach(e => {
+            new Swiper(e.querySelector('.swiper'), {
+                modules: [Navigation],
+                slidesPerView: 1,
+                spaceBetween: rem(3),
+                simulateTouch: false,
+                navigation: {
+                    prevEl: e.querySelector('.swiper-btn-prev'),
+                    nextEl: e.querySelector('.swiper-btn-next'),
+                }
+
+
+            })
+        })
+
+
     }
 }
 
@@ -95,4 +139,109 @@ function modalsHandler() {
         }
         html.removeClass('lock')
     })
+}
+
+function dropDowns() {
+    const ddBtn = $('.drop-down-target')
+    if (!ddBtn) return
+
+    ddBtn.on('click', (e) => {
+        e.preventDefault()
+        e.currentTarget.classList.toggle('_opened')
+        e.currentTarget.closest('.drop-down-container')
+            .classList.toggle('_opened')
+    })
+
+}
+
+const inputChange = new Event('input')
+
+function initSelect() {
+
+
+    const selects = document.querySelectorAll('.select')
+    if (!selects) return
+
+    selects.forEach((select) => {
+        const options = select.querySelectorAll('.select__items-list-e')
+
+        options.forEach((option) => {
+            option.addEventListener('click', (ev) => {
+                const input = select.querySelector('.select__target-input')
+                /**
+                * 1. присваивание нового значения инпуту на прямую
+                * (значение для инпута берется из data-value или textContent кнопки)
+                * 
+                * 2. тригер input ивента на инпуте для тригера валидации формы и записи новго значения
+                * 
+                * 3-4. переключение дизейбла у кнопок
+                * 
+                * 5. тригер дропдауна для закрытия
+                */
+
+                input.value = ev.target.dataset.value || ev.target.textContent
+                input.dispatchEvent(inputChange)
+                options.forEach((btn) => btn.removeAttribute('disabled'))
+                ev.target.setAttribute('disabled', 'true')
+
+                select.querySelector('.drop-down-target').click()
+
+            })
+        })
+
+    })
+
+
+
+}
+
+function reviewOpener() {
+
+    if (!document.querySelector('.news-cards__c-list') || window.innerWidth >= 769) return
+
+
+    const container = $('.card-news__info'),
+        textContainerSelector = '.card-news__info-body',
+        textSelector = '.card-news__info-body-text',
+        shortenedTextSelecor = '_closed',
+        maxHeight = 150
+
+    document.querySelectorAll(textSelector).forEach((e) => {
+        if (e.offsetHeight > maxHeight) {
+            e = $(e)
+            e.addClass(shortenedTextSelecor)
+            console.log(e.closest(textContainerSelector));
+            e.closest(textContainerSelector)
+                .append(`<button href="#" class="card-news__loadmore txt16 txt-up flex-row">
+                    подробнее
+    </button>`)
+        }
+
+    })
+
+    container.on('click', (ev) => {
+       
+        console.log();
+        if (!ev.target.classList.contains('card-news__loadmore')) return
+        const  target = ev.target
+        const parent = target.closest(textContainerSelector)
+
+        if (!ev.target.classList.contains('_opened')) {
+            ev.target.classList.add('_opened')
+            parent.querySelector(textSelector)
+                .classList.remove(shortenedTextSelecor)
+            target.textContent = 'свернуть'
+
+
+        } else {
+            ev.target.classList.remove('_opened')
+            parent.querySelector(textSelector)
+                .classList.add(shortenedTextSelecor)
+            target.textContent = 'подробнее'
+        }
+
+
+
+    })
+
 }

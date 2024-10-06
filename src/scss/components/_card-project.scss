@@ -1,0 +1,63 @@
+.card-project {
+    border-top: .2rem solid $gray;
+    padding-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+    width: 100%;
+
+    @include small-tablet {
+        gap: 2.5rem;
+    }
+
+    &__top {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        @include small-tablet{
+         font-size: 2.4rem;   
+        }
+        & img, & svg{
+            transform: rotate(-90deg);
+           @include same-size(2.6rem, 2.6rem);
+        }
+       
+    }
+
+    &__name {
+        text-transform: uppercase;
+        font-family: EuropeExt;
+        @include wrap-text(2);
+        @include small-tablet{
+            font-size: 3.6rem;
+        }
+    }
+
+    &__imgs {
+        width: 100%;
+        position: relative;
+        & .swiper-nav{
+            @include desktop{
+                display: none;
+            }
+
+            position: absolute;
+            z-index: 10;
+            right: 3rem;
+            bottom: 3rem;
+            display: flex;
+            gap: 1rem;
+        }
+        & .swiper-slide{
+            display: flex;
+            height: 36rem;
+            overflow: hidden;
+            & img{
+                object-fit: cover;
+                
+            }
+        }
+    }
+
+
+}

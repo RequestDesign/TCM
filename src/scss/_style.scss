@@ -55,12 +55,8 @@ main {
     }
 
     &:first-of-type {
-      margin-top: 0;
-
-      /* padding-top: 20rem; */
-      @include small-tablet {
-        /*  padding-top: 18rem; */
-      }
+      margin: 0;
+     
     }
 
     &._first {
@@ -111,6 +107,23 @@ main {
 
   &-gr {
     color: $gray-main;
+  }
+}
+.bg{
+  &-wh {
+    background-color: $white;
+  }
+
+  &-blk {
+    background-color: $black;
+  }
+
+  &-grn {
+    background-color: $green;
+  }
+
+  &-gr {
+    background-color: $gray-main;
   }
 }
 
