@@ -2,35 +2,199 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>О нас</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>О нас</title>
 
 </head>
 
 <body>
-    <div class="wrapper">
-        <include src="./components/_header.html"></include>
-        <main>
-            <section class="news news-heading section-bg ">
-                <div class="section-bg-img">
-                  <img src="../assets/images/heading.webp" alt="heading">
-                </div>
-                <div class="container">
-                  <div class="bread_white">
-                    <include src="./components/_bread.html"></include>
-                  </div>
-                  
-                  <h1 class="tl1 col-wh news-ttl txt-up">Строительная 
-                    компания ТСМ</h1>
-                </div>
-               
-              </section>
+  <div class="wrapper">
+    <include src="./components/_header.html"></include>
+    <main>
+      <section class="section-bg ">
+        <div class="section-bg-img">
+          <img src="../assets/images/heading.webp" alt="heading">
+        </div>
+        <div class="container section-bg__c">
+          <div class="bread_white bread-overlay">
+            <include src="./components/_bread.html"></include>
+          </div>
 
-        </main>
-        <include src="./components/_footer.html"></include>
-        <include src="./components/_modals.html"></include>
-    </div>
+          <h1 class="tl1 col-wh txt-up txt-wrap">Строительная
+            компания TCM</h1>
+        </div>
+      </section>
+
+      <section class="about about-princeples">
+        <div class="container about-princeples__c">
+          <h2 class="tl2 txt-up txt-wrap"> НадЁжность и профессионализм:
+            наши принципы в строительстве
+          </h2>
+          <div class="about-princeples__c-body">
+            <p class="txt20">
+              ТСМ сертифицирована по системе менеджмента качества ГОСТ Р ИСО 9001-2015 (ISO 9001:2015), что подтверждает
+              нашу приверженность к постоянному улучшению, оптимизированию процессов и повышению эффективности нашей
+              деятельности.
+            </p>
+            <ul class="about-princeples__c-body-items">
+              <li>
+                <span class="tl2 col-grn">415</span>
+                <span class="txt18">Профессиональные мастера и рабочие</span>
+              </li>
+              <li>
+                <span class="tl2 col-grn">200+</span>
+                <span class="txt18">ТЫС. КВ. М НЕДВИЖИМОСТИ </span>
+              </li>
+              <li>
+                <span class="tl2 col-grn">250+</span>
+                <span class="txt18">Реализованных проектов</span>
+              </li>
+              <li>
+                <span class="tl2 col-grn">13</span>
+                <span class="txt18">Лет опыта</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="about about-adv">
+        <div class="container about-adv__c">
+          <div class="section-heading">
+            <p class="section-heading-name">Преимущества</p>
+            <h2 class="tl2 section-heading-ttl">Индивидуальный подход
+              и высокие стандарты
+            </h2>
+          </div>
+          <ul class="about-adv__c-list">
+            <li class="about-adv__c-list-e">
+              <div class="about-adv__c-list-e-img">
+                <img src="./assets/images/heading.webp" alt="img">
+              </div>
+              <div class="about-adv__c-list-e-body">
+                <p class="txt20 col-wh">
+                  Комплексный подход к выполнению строительно-монтажных и отделочных работ
+                </p>
+                <p class="txt20 col-grn">01</p>
+              </div>
+            </li>
+            <li class="about-adv__c-list-e">
+              <div class="about-adv__c-list-e-img">
+                <img src="./assets/images/heading.webp" alt="img">
+              </div>
+              <div class="about-adv__c-list-e-body">
+                <p class="txt20 col-wh">
+                  Высокий уровень организации производства и качества выполнения работ
+                </p>
+                <p class="txt20 col-grn">02</p>
+              </div>
+            </li>
+            <li class="about-adv__c-list-e">
+              <div class="about-adv__c-list-e-img">
+                <img src="./assets/images/heading.webp" alt="img">
+              </div>
+              <div class="about-adv__c-list-e-body">
+                <p class="txt20 col-wh">
+                  Стремление соответствовать высоким требованиям клиентов и превосходить их ожидания
+                </p>
+                <p class="txt20 col-grn">03</p>
+              </div>
+            </li>
+            <li class="about-adv__c-list-e">
+              <div class="about-adv__c-list-e-img">
+                <img src="./assets/images/heading.webp" alt="img">
+              </div>
+              <div class="about-adv__c-list-e-body">
+                <p class="txt20 col-wh">
+                  Сертификация по системе менеджмента качества ГОСТ Р ИСО 9001-2015 (ISO 9001:2015)
+                </p>
+                <p class="txt20 col-grn">04</p>
+              </div>
+            </li>
+          </ul>
+
+        </div>
+
+      </section>
+
+      <section class="about about-clients">
+
+        <h2 class="tl2 txt-up"> Наши клиенты</h2>
+
+        <include src="./components/_clients.html"></include>
+        <div class="desktop">
+          <button class="btn-green txt18">
+            ПЕРЕЙТИ К КЛИЕНТАМ
+            <img src="./assets/images/icons/arrow-right-black.svg" alt="mail">
+          </button>
+        </div>
+
+      </section>
+
+      <section class="section-bg about-ready">
+        <div class="section-bg-img">
+          <img src="../assets/images/heading.webp" alt="heading">
+        </div>
+        <div class="container section-bg__c ">
+          <div class="about-ready__c">
+            <h2 class="tl1 col-wh txt-up txt-wrap">Мы готовы
+              в комплексе решить
+              задачи, стоящие
+              перед Вами</h2>
+
+            <p class="txt20 col-wh">Воплотим любую архитектурную идею, предложим оптимальные решения и реализуем Ваш
+              проект в рамках бюджета и
+              в поставленный срок</p>
+          </div>
+
+
+
+        </div>
+      </section>
+
+      <section class="about-command">
+        <div class="container about-command__c">
+
+          <div class="section-heading section-heading_about">
+            <p class="section-heading-name">Наш подход</p>
+            <h2 class="tl2 section-heading-ttl">У нас работают
+              профессионалы
+              своего дела
+            </h2>
+            <div class="section-heading-body">
+              <p class="txt-wrap">Команда ТСМ всегда стремится соответствовать высоким требованиям и превосходить ожиданиям клиента.
+                
+                Достичь этой цели возможно только при ответственном отношении на каждом этапе выполнения работ и
+                показывая высокий уровень качества, предоставляемых услуг.
+              </p>
+            
+              <div class="section-heading-body-img">
+                <img src="./assets/images/news.webp" alt="img">
+              </div>
+
+
+            </div>
+            <div class="desktop section-heading-link">
+              <a href="#" class="btn-green txt18">
+                КАРЬЕРА
+                <img src="./assets/images/icons/arrow-right-black.svg" alt="mail">
+              </a>
+            </div>
+          </div>
+
+
+
+        </div>
+
+      </section>
+
+      
+
+    </main>
+    <include src="./components/_footer.html"></include>
+    <include src="./components/_modals.html"></include>
+  </div>
 
 
 </body>

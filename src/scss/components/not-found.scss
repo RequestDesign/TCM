@@ -1,0 +1,46 @@
+.notfound {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &-main {
+        display: flex;
+
+        &+footer {
+            padding-top: 5rem;
+        }
+
+    }
+
+    &__c {
+        margin-top: 10rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        text-align: center;
+
+        &-code {
+            font-family: EuropeExt;
+            font-size: 40rem;
+            line-height: 105%;
+            font-weight: 700;
+            background-clip: text;
+            -webkit-background-clip: text;
+            color: transparent;
+            background-image: url(../../assets/images/projects.webp);
+
+            @include small-tablet {
+                font-size: 24rem;
+                background-position: center;
+            }
+        }
+
+        & .btn-green {
+            margin-top: 5rem;
+            background-color: $green;
+            color: $white;
+        }
+    }
+}

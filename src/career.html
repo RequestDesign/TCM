@@ -12,20 +12,67 @@
   <div class="wrapper">
     <include src="./components/_header.html"></include>
     <main>
-      <section class="news news-heading section-bg ">
+      <section class="section-bg ">
         <div class="section-bg-img">
           <img src="../assets/images/heading.webp" alt="heading">
         </div>
-        <div class="container">
-          <div class="bread_white">
+        <div class="container section-bg__c">
+          <div class="bread_white bread-overlay">
             <include src="./components/_bread.html"></include>
           </div>
-          
-          <h1 class="tl1 col-wh news-ttl txt-up">вакансии</h1>
+
+          <h1 class="tl1 col-wh txt-up">вакансии</h1>
         </div>
-       
       </section>
-  
+
+      <section class="career">
+        <div class="container career__c">
+          <span class=" career__c-heading">
+            Компания TCM приглашает талантливых специалистов присоединиться к нашей команде.
+            У нас открыты вакансии
+            различных уровней и направлений, где вы сможете проявить свой потенциал и развиться профессионально. Мы
+            предлагаем конкурентные условия труда, дружелюбный коллектив и возможность карьерного роста
+          </span>
+          <ul class="career__c-list">
+            <li class="career__c-list-e">
+              <div class="career__c-list-e-img">
+                <img src="./assets/images/news.webp" alt="vacancy">
+              </div>
+              <div class="career__c-list-e-body">
+                <h3 class="tl3 txt-up">Комплектатор</h3>
+                <p class="txt20">Приглашаем в команду комплектатора. Рассматриваем кандидатуры с опытом работы от 3 лет
+                  и имеющимся портфолио</p>
+
+                <a href="#" class="btn-arrow txt-up txt16 career__c-list-e-body-link">
+                  смотреть вакансию
+                  <img src="./assets/images/icons/arrow-down-green.svg" alt="arrow">
+                </a>
+
+              </div>
+            </li>
+
+            <li class="career__c-list-e career__c-list-e_reverse">
+              <div class="career__c-list-e-img">
+                <img src="./assets/images/news.webp" alt="vacancy">
+              </div>
+              <div class="career__c-list-e-body">
+                <h3 class="tl3 txt-up">Комплектатор</h3>
+                <p class="txt20">Приглашаем в команду комплектатора. Рассматриваем кандидатуры с опытом работы от 3 лет
+                  и имеющимся портфолио</p>
+
+                <a href="#" class="btn-arrow txt-up txt16 career__c-list-e-body-link">
+                  смотреть вакансию
+                  <img src="./assets/images/icons/arrow-down-green.svg" alt="arrow">
+                </a>
+
+              </div>
+            </li>
+
+          </ul>
+        </div>
+
+      </section>
+
 
     </main>
     <include src="./components/_footer.html"></include>

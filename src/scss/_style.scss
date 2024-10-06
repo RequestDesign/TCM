@@ -60,13 +60,15 @@ main {
     }
 
     &._first {
-      margin-top: 3.2rem;
+      margin-top: 14rem;
 
       @include small-tablet {
-        margin-top: 6.4rem;
+        margin-top: 18rem;
       }
     }
+    
   }
+
 }
 
 .desktop {
@@ -125,10 +127,18 @@ main {
   &-gr {
     background-color: $gray-main;
   }
+  &-bg{
+    background-color: $bg;
+  }
 }
 
-.txt-up {
-  text-transform: uppercase;
+.txt{
+  &-up {
+    text-transform: uppercase;
+  }
+  &-wrap{
+    white-space: pre-line;
+  }
 }
 
 .flex-row {

@@ -2,22 +2,28 @@
     display: flex;
     align-items: center;
     width: fit-content;
+    position: relative;
+    padding-right: 3rem;
+    @include small-tablet{
+        padding-right: 6rem;
+    }
+
+    &:hover img,
+    &:hover svg {
+        transform: rotate(-90deg) translateY(1rem);
+    }
 
 
+    & img,
+    & svg {
+        position: absolute;
+        top: -.5rem;
+        right: 0;
+        @include same-size(2.6rem, 2.6rem);
+       
+        transform: rotate(-90deg) translateY(0);
+        transition: transform .5s;
 
-    & img {
-        margin-left: 1rem;
-        width: 2.1rem;
-        height: 2.1rem;
-        transition: margin .5s;
-        transform: rotate(-90deg);
-
-        @include small-tablet {
-            width: 4.2rem;
-            height: 4.2rem;
-            margin-left: 2rem;
-
-        }
     }
 }
 

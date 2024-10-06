@@ -2,7 +2,7 @@
     overflow-x: auto;
     &__list{
         display: flex;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
         gap: .8rem;
         &-item{
             color: $gray-main;
@@ -24,9 +24,10 @@
         }
     }
     &-overlay{
+        max-width: 100%;
         position: absolute;
         z-index: 50;
-        top: 20rem;
+        top: 15rem;
         left:10%;
     }
     &_white{

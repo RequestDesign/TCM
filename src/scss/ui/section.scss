@@ -6,6 +6,11 @@
         'name ttl'
         'name body';
     gap: 9rem;
+    &_about{
+        grid-template-areas: 
+        'name ttl'
+        'link body';
+    }
 
     @include small-tablet {
         grid-template-columns: 100%;
@@ -32,6 +37,10 @@
         white-space: pre-line;
         text-transform: uppercase;
     }
+    &-link{
+        align-self: flex-end;
+        grid-area: link;
+    }
 
     &-body {
         grid-area: body;
@@ -42,6 +51,27 @@
         font-weight: 400;
         line-height: 120%;
         text-align: left;
+        display: flex;
+        gap: 7.4rem;
+        @include small-tablet{
+            flex-direction: column;
+        }
+
+        &-img {
+            width: 57.3rem;
+            height: 31rem;
+            display: flex;
+            flex-shrink: 0;
+            & img{
+                object-fit: cover;
+                object-position: center;
+            }
+
+            @include small-tablet {
+                width: 100%;
+                height: 60rem;
+            }
+        }
 
     }
 }
@@ -71,15 +101,23 @@
         }
     }
 
-   
+
     & .container {
         display: flex;
         flex-direction: column;
         padding-top: 15rem;
-        @include small-tablet{
+
+        @include small-tablet {
             padding-top: 20rem;
         }
     }
+
+    &__c {
+        justify-content: center;
+        height: 100%;
+    }
+
+
 }
 
 .section-heading-swiper {

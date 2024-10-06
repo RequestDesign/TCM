@@ -12,7 +12,29 @@
   <div class="wrapper">
     <include src="./components/_header.html"></include>
     <main>
-        <h1 class="tl1">Рекомендации</h1>
+      <section class="recomendation _first">
+        <div class="container recomendation__c">
+          <include src="./components/_bread.html"></include>
+          <h1 class="tl1 ">Рекомендательные письма</h1>
+          <ul class="recomendation__c-list">
+            <li class="recomendation__c-list-e">
+              <div class="recomendation__c-list-e-img">
+                <img src="./assets/images/recomend.png" alt="recomend">
+              </div>
+              <span class="recomendation__c-list-e-footer tl3">
+                Mazars
+                <img src="./assets/images/icons/arrow-down-green.svg" alt=">">
+              </span>
+            </li>
+          </ul>
+
+          <button class="loadMore">
+            Загрузить еще
+            <img src="./assets/images/icons/arrow-down-green.svg" alt="V">
+          </button>
+        
+        </div>
+      </section>
 
     </main>
     <include src="./components/_footer.html"></include>

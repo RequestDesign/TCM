@@ -1,0 +1,114 @@
+.about {}
+
+
+
+.about-princeples {
+    &__c {
+        display: flex;
+        flex-direction: column;
+        gap: 7rem;
+
+        @include small-tablet {
+            gap: 5rem;
+        }
+
+        &-body {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 28rem;
+
+            @include small-tablet {
+                grid-template-columns: 100%;
+                gap: 8rem;
+            }
+
+            &-items {
+                gap: 5rem;
+                display: grid;
+                grid-template-columns: auto auto;
+                grid-template-rows: 1fr 1fr;
+
+                & li {
+                    display: flex;
+                    flex-direction: column;
+
+                    & .txt18 {
+                        text-transform: lowercase;
+
+                        @include small-tablet {
+                            font-size: 3rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.about-adv {
+    &__c {
+        display: flex;
+        flex-direction: column;
+        gap: 7.8rem;
+
+        &-list{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: 35.6rem;
+            gap: 3.2rem;
+            @include small-tablet{
+                grid-template-columns: 100%;
+                grid-template-rows: repeat(4,71.2rem);
+            }
+            &-e{
+                position: relative;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                &-img{
+                    position: absolute;
+                    z-index: -1;
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    & img{
+                        object-fit: cover;
+                        object-position: center;
+                    }
+                   
+                }
+                &-body{
+                    flex-grow: 1;
+                    display: flex;
+                    flex-direction: column;
+                    background-color: rgba(0, 0, 0, 0.1);
+                    padding: 2.1rem;
+                    & p{
+                        margin-top: auto;
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+.about-clients{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 7rem;
+   
+  
+}
+.about-ready{
+    &__c{
+        display: grid;
+        grid-template-columns: 1fr .3fr;
+        align-items: flex-end;  
+        @include small-tablet{
+            grid-template-columns: 100%;
+        }
+    }
+}

@@ -8,6 +8,37 @@
     @include small-tablet{
         grid-template-columns: 100%;
     }
+    &_small{
+        @include desktop{
+            grid-template-columns: 21.5rem auto auto;
+            gap: 3.2rem;
+            border: none;
+            padding: 0;
+             & .card-news__date{
+                grid-column: 2 / span 2;
+                
+             }
+             & .card-news__img{
+                height: 17rem;
+                grid-row: 1 / span 2;
+             }
+             & .card-news__info{
+                grid-column: 2 / span 2;
+                border-bottom: .1rem solid $gray;
+             }
+             
+        }
+        & .card-news__date{
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            
+         }
+        & .card-news__link{
+            display: flex;
+        }
+       
+    }
 
     &__date {
         grid-column: 1 / span 2;
