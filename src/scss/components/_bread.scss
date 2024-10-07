@@ -1,40 +1,48 @@
-.bread{
+.bread {
     overflow-x: auto;
-    &__list{
+
+    &__list {
         display: flex;
         flex-wrap: wrap;
         gap: .8rem;
-        &-item{
+
+        &-item {
             color: $gray-main;
-            &::after{
+
+            &::after {
                 content: '/';
                 margin-left: .8rem;
             }
-            &:hover{
+
+            &:hover {
                 color: $green;
             }
 
-            &_current{
+            &_current {
                 color: $black;
-                &::after{
+
+                &::after {
                     display: none;
                 }
             }
 
         }
     }
-    &-overlay{
-        max-width: 100%;
+
+    &-overlay {
         position: absolute;
-        z-index: 50;
-        top: 15rem;
-        left:10%;
+        z-index: 2;
+        left: 50%;
+        top: 18rem;
+        transform: translateX(-50%);
     }
-    &_white{
-        & .bread__list-item{
+
+    &_white {
+        & .bread__list-item {
             color: $gray;
         }
-        & .bread__list-item_current{
+
+        & .bread__list-item_current {
             color: $white;
         }
     }

@@ -6,10 +6,15 @@
         'name ttl'
         'name body';
     gap: 9rem;
-    &_about{
-        grid-template-areas: 
-        'name ttl'
-        'link body';
+
+    &_about {
+        grid-template-areas:
+            'name ttl'
+            'link body';
+
+            & .section-heading-body{
+                margin: 0;
+            }
     }
 
     @include small-tablet {
@@ -37,7 +42,8 @@
         white-space: pre-line;
         text-transform: uppercase;
     }
-    &-link{
+
+    &-link {
         align-self: flex-end;
         grid-area: link;
     }
@@ -53,7 +59,8 @@
         text-align: left;
         display: flex;
         gap: 7.4rem;
-        @include small-tablet{
+
+        @include small-tablet {
             flex-direction: column;
         }
 
@@ -62,7 +69,8 @@
             height: 31rem;
             display: flex;
             flex-shrink: 0;
-            & img{
+
+            & img {
                 object-fit: cover;
                 object-position: center;
             }
@@ -79,13 +87,18 @@
 .section-bg {
     width: 100%;
     position: relative;
-    height: 85vh;
-    max-height: 150rem;
-    box-shadow: 0px -26rem 13.5rem -8.2rem $bg inset;
+    height: 100vh;
+    min-height: 100rem;
+    max-height: 200rem;
+    box-shadow: 0px -23rem 9.5rem -11.2rem $bg inset;
+    display: flex;
+    align-items: center;
 
     @include small-tablet {
-        box-shadow: 0px -33rem 13.5rem -8.2rem $bg inset;
+        box-shadow: 0px -26rem 12.5rem -10.2rem $bg inset;
+
     }
+
 
     &-img {
         position: absolute;
@@ -105,16 +118,20 @@
     & .container {
         display: flex;
         flex-direction: column;
-        padding-top: 15rem;
 
-        @include small-tablet {
-            padding-top: 20rem;
-        }
+
     }
 
     &__c {
-        justify-content: center;
+        box-sizing: border-box;
+        padding-top: 15rem;
         height: 100%;
+        justify-content: center;
+
+        @include small-tablet {
+            padding-top: 15rem;
+        }
+
     }
 
 

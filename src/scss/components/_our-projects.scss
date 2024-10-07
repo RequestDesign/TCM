@@ -11,12 +11,15 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                justify-content: flex-end;
+               
             }
 
             & .our-projects-item {
                 @include desktop {
                     opacity: .5;
-                    
+                    height: 70rem;
+
                 }
 
                 position: relative;
@@ -29,13 +32,18 @@
                 }
 
                 &-img {
-                    & img {
-                        transition: transform .5s;
-                        max-width: 100%;
+                    display: flex;
+                    width: 35.7rem;
+                    height: 45rem;
+                    transition: width .5s, height .5s;
 
-                        @include desktop {
-                            transform: scale(0.8) translateY(5.5rem);
-                        }
+                    @include small-tablet {
+                        width: 100%;
+                        height: 84rem;
+                    }
+
+                    & img {
+                        object-fit: cover;
                     }
                 }
 
@@ -47,10 +55,11 @@
                     line-height: 200%;
                     text-align: center;
                     transition: opacity .5s;
+
                     @include desktop {
                         opacity: 0;
                     }
-                    
+
 
                 }
 
@@ -62,28 +71,32 @@
                     transition: opacity .5s;
                 }
 
-                &_prev,
+                &_prev {
+                    @include desktop {
+                        & .our-projects-item-img {
+                            height: 51rem;
+                         transform: translateX(5.5rem);  
+                        }
+                    }
+                }
+
                 &_next {
                     @include desktop {
                         & .our-projects-item-img {
-                            & img {
-                                transform: scale(1) translateX(-3.5rem);
-                            }
+                            height: 51rem;
+                            transform: translateX(-5.5rem);  
                         }
                     }
 
                 }
-                &_prev{
-                    @include desktop {
-                        & .our-projects-item-img {
-                            & img {
-                                transform: scale(1) translateX(3.5rem);
-                            }
-                        }
-                    }  
-                }
+
+               
 
                 &_active {
+                    & a {
+                        width: 100%;
+                        height: 100%;
+                    }
                     @include desktop {
                         opacity: 1;
 
@@ -92,15 +105,11 @@
                             opacity: 1;
                         }
 
-                        & a {
-                            width: 100%;
-                            height: 100%;
-                        }
+                        
 
                         & .our-projects-item-img {
-                            & img {
-                                transform: scale(1.1) translateY(-2rem);
-                            }
+                           width: 62rem;
+                           height: 62rem;
                         }
                     }
 

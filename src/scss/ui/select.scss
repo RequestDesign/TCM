@@ -15,7 +15,13 @@
         align-items: center;
         width: 100%;
         padding: 1.4rem 2rem;
-  
+
+        @include small-tablet {
+            & input {
+                width: 30rem;
+
+            }
+        }
 
         &-arrow {
             transition: all .5s;
@@ -34,9 +40,10 @@
             & .select__target-arrow {
                 border-bottom: 0rem solid $green;
                 border-top: 1rem solid $green ;
-                @include small-tablet{
+
+                @include small-tablet {
                     border-bottom: 0rem solid $green;
-                    border-top: 2rem solid $green ;  
+                    border-top: 2rem solid $green ;
                 }
             }
         }

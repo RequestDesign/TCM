@@ -36,13 +36,11 @@
     &__top{
         display: flex;
         & .tl2{
-            margin-top: 29%;
+          
             white-space: pre-line;
             width: fit-content;
             color: $white;
-            @include small-tablet{
-                margin-top: 60%;
-            }
+         
         }
     }
    

@@ -107,6 +107,7 @@
         display: grid;
         grid-template-columns: 1fr .3fr;
         align-items: flex-end;  
+        gap: 4rem;
         @include small-tablet{
             grid-template-columns: 100%;
         }

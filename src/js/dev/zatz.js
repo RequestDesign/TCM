@@ -12,6 +12,8 @@ $(function () {
     dropDowns()
     initSelect()
     reviewOpener()
+    headerScrollLisneter()
+   
 })
 
 function initSwipers() {
@@ -104,6 +106,23 @@ function initSwipers() {
 
 
     }
+    const recomendation = document.querySelector('.recomendation__c-slider')
+    if (recomendation) {
+        new Swiper(recomendation.querySelector('.swiper'), {
+            modules: [Navigation],
+            slidesPerView: 1,
+            spaceBetween: rem(3),
+            navigation: {
+                prevEl: recomendation.querySelector('.swiper-btn-prev'),
+                nextEl: recomendation.querySelector('.swiper-btn-next'),
+            }
+
+
+        })
+
+
+
+    }
 }
 
 function modalsHandler() {
@@ -127,15 +146,20 @@ function modalsHandler() {
 
 
     modalClosers.on('click', (ev) => {
-        const { classList } = ev.target
+
+        const { classList } = ev.target;
+        console.log(classList.contains('modal-closer'));
         if (!classList.contains('modal-closer')) return
 
         if (classList.contains('modal')) {
             $(ev.target).fadeOut().removeClass('_opened')
 
         } else {
-            $(ev.target.closest('.modal')).fadeOut().removeClass('_opened')
 
+            $(ev.target.closest('.modal')).fadeOut().removeClass('_opened')
+            if ($(ev.target.closest('.header-mobile'))) {
+                $(ev.target.closest('.header-mobile')).removeClass('_opened')
+            }
         }
         html.removeClass('lock')
     })
@@ -196,6 +220,7 @@ function initSelect() {
 }
 
 function reviewOpener() {
+    //работать только при загрузке страницы на мобиле
 
     if (!document.querySelector('.news-cards__c-list') || window.innerWidth >= 769) return
 
@@ -220,10 +245,10 @@ function reviewOpener() {
     })
 
     container.on('click', (ev) => {
-       
+
         console.log();
         if (!ev.target.classList.contains('card-news__loadmore')) return
-        const  target = ev.target
+        const target = ev.target
         const parent = target.closest(textContainerSelector)
 
         if (!ev.target.classList.contains('_opened')) {
@@ -245,3 +270,27 @@ function reviewOpener() {
     })
 
 }
+
+function headerScrollLisneter(){
+ 
+    const header = document.querySelector('.header')
+    if(!header) return
+
+    window.addEventListener('scroll', (e) => {
+        if (window.innerWidth < 769) return
+
+        if (scrollY > 0 ) {
+            header.classList.add('_cliped')
+           
+
+        } else {
+          
+            header.classList.remove('_cliped')
+
+        }
+
+
+
+    })
+}
+

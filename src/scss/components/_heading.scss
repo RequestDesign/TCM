@@ -2,19 +2,23 @@
     padding-top: 0 !important;
  
     &__c{
+        flex-grow: 1;
         display: flex;
         flex-direction: column;
+        justify-content: flex-end;
+
+       
         &-top{
-           padding-top: 44rem; 
+          
            max-width: 90rem;
            text-transform: uppercase;
         }
         &-bottom{
-          padding-top: 28rem;
+          margin-top: 28rem;
             margin-left: auto;
             width: fit-content;
             @include small-tablet{
-                padding-top: 46rem;
+                margin-top: 63rem;
                 margin-left: 0;
             }
             & p{

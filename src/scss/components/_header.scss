@@ -1,20 +1,21 @@
 .header {
-    background-color: rgba(27, 27, 27, 0.4);
-    backdrop-filter: blur(1rem);
+    transition: background-color .5s;
     position: fixed;
     z-index: 100;
     width: 100%;
 
-    &-wrp {
-        position: relative;
-    }
+    &._cliped {
+        @include desktop {
+            background-color: rgba(27, 27, 27, 0.4);
+            backdrop-filter: blur(1rem);
 
-    &._opened .header__c-logo {
-        @include small-tablet {
-            border-color: transparent;
+        }
+
+        & .header__c-logo {
+            border-color: $gray;
 
             & svg {
-                fill: $green;
+                fill: $white;
 
                 & g>path:nth-child(2) {
                     fill: $green;
@@ -23,8 +24,49 @@
             }
         }
 
+        & .btn-header {
+            color: $white ;
+
+
+            & svg {
+                stroke: $white ;
+            }
+
+        }
     }
 
+    @include small-tablet {
+        position: absolute;
+    }
+
+    &-wrp {
+        position: relative;
+    }
+
+    & .btn-header {
+        color: $white;
+        border-color: $gray;
+
+        & svg {
+            stroke: $white;
+        }
+
+        @media (hover: hover) {
+            &:hover {
+
+                background-color: $green;
+                color: $white ;
+
+
+                & svg {
+                    stroke: $white ;
+                }
+
+            }
+        }
+
+
+    }
 
 
     &__c {
@@ -48,7 +90,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            border: .2rem solid $gray-main;
+            border: .2rem solid $gray;
             transition: border-color .5s;
             position: relative;
             z-index: 102;
@@ -56,14 +98,15 @@
             @include small-tablet {
                 width: 30rem;
                 height: 11.2rem;
-               
+
             }
 
             & svg {
                 width: 13.3rem;
                 height: 5.6rem;
                 transition: fill .5s;
-                @include small-tablet{
+
+                @include small-tablet {
                     height: 8.4rem;
                     width: 20rem;
                 }
@@ -74,15 +117,17 @@
                 }
             }
 
-            &:hover {
-                border-color: $gray;
+            @media (hover: hover) {
+                &:hover {
+                    border-color: $gray;
 
-                & svg {
-                    fill: $green;
+                    & svg {
+                        fill: $green;
 
-                    & g>path:nth-child(2) {
-                        fill: $gray-main;
-                        stroke: $gray-main;
+                        & g>path:nth-child(2) {
+                            fill: $gray-main;
+                            stroke: $gray-main;
+                        }
                     }
                 }
             }
@@ -107,9 +152,6 @@
             }
         }
 
-        & .btn-tr {
-            padding:1rem  3.3rem;
-        }
 
         &-lang-mob {
             margin-left: auto;
@@ -148,92 +190,157 @@
                 transition: all .5s;
             }
 
-            &._opened {
-                gap: 1.5rem;
-
-                & span {
-                    opacity: 0;
-                    width: 4.7rem;
-                    margin-left: 1.5rem;
-                    background-color: $black;
-
-                    &:first-of-type {
-                        opacity: 1;
-                        transform: rotate(45deg);
-                        transform-origin: left top;
-                    }
-
-                    &:last-of-type {
-                        opacity: 1;
-                        transform: rotate(-45deg);
-                        transform-origin: left bottom;
+        }
 
 
-                    }
+    }
+
+}
+
+.header-black {
+    & header {
+        & .header__c-logo {
+
+
+            & svg {
+                fill: $green;
+
+                & g>path:nth-child(2) {
+                    fill: $gray-main;
+                    stroke: $gray-main;
                 }
             }
         }
 
-        &-modal {
-            display: none;
+        & .btn-header {
 
+            color: $black;
 
-
-            @include small-tablet {
-                position: absolute;
-                z-index: 101;
-                width: 100vw;
-                height: 100vh;
-                top: 0;
-                left: 0;
-                background-color: $bg;
-                box-sizing: border-box;
-                padding: 16rem 0;
-
-                &._opened .header__c-modal-self {
-                    transform: translateY(0);
-                }
+            & svg {
+                stroke: $black;
             }
 
+            &:hover {
+                background-color: $green;
+                color: $white ;
 
-            &-self {
+
+                & svg {
+                    stroke: $white ;
+                }
+            }
+        }
+
+        & .header__c-btn span {
+            background-color: $black;
+        }
+    }
+}
+
+.header-mobile {
+
+    display: none;
+
+
+
+    @include small-tablet {
+        display: grid;
+        grid-template-columns: 100vw 3rem;
+        position: fixed;
+        z-index: 101;
+        width: calc(100vw + 3rem);
+        height: 100vh;
+        top: 0;
+        left: -100vw;
+
+
+        transition: transform .5s;
+
+        &._opened {
+            transform: translateX(100vw);
+        }
+    }
+
+    &-opener {
+        align-self: center;
+        width: 3rem;
+        height: 14rem;
+        background-color: $green;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0 1.4rem 1.4rem 0;
+
+    }
+
+    &-wrp {
+        overflow-y: auto;
+        height: 100%;
+        background-color: $bg;
+    }
+
+    &__self {
+        display: flex;
+        flex-direction: column;
+
+
+        height: 100%;
+        width: 100%;
+
+
+        &-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 2rem 0;
+            width: 100%;
+            padding: 0 3rem;
+
+            &-logo {
+                width: 26rem;
+                height: 12rem;
+            }
+
+            &-closer {
+                width: 4.8rem;
+                height: 4.8rem;
+                background-image: url(../../assets/images/icons/x-black.svg);
+                background-position: center;
+                background-size: 80%;
+                background-repeat: no-repeat;
+            }
+        }
+
+        &-item {
+            padding: 6rem 3rem;
+            border-bottom: .2rem solid $gray;
+
+            &:last-of-type {
+                border: none;
+                text-align: center;
+                margin: 12rem auto 0;
+                padding: 0;
+                width: fit-content;
+            }
+        }
+
+        &-btns {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            width: 100%;
+
+            &-e {
                 display: flex;
-                flex-direction: column;
-                transform: translateY(-100%);
-                transition: transform .5s;
+                justify-content: center;
+                align-items: center;
+                border: .2rem solid $gray;
+                padding: 4rem 0;
 
-                &-item {
-                    padding: 6rem 3rem;
-                    border-bottom: .2rem solid $gray;
-
-                    &:last-of-type {
-                        border: none;
-                        text-align: center;
-                        margin: 12rem auto 0;
-                        padding: 0;
-                        width: fit-content;
-                    }
-                }
-
-                &-btns {
-                    display: grid;
-                    grid-template-columns: 1fr 1fr;
-                    width: 100%;
-
-                    &-e {
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        border: .2rem solid $gray;
-                        padding: 4rem 0;
-
-                    }
-
-                }
             }
-
 
         }
     }
+
+
 
 }

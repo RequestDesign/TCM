@@ -9,30 +9,84 @@
 </head>
 
 <body>
-  <div class="wrapper">
+  <div class="wrapper header-black">
     <include src="./components/_header.html"></include>
+    <include src="./components/_header-mobile.html"></include>
     <main>
       <section class="recomendation _first">
         <div class="container recomendation__c">
           <include src="./components/_bread.html"></include>
           <h1 class="tl1 ">Рекомендательные письма</h1>
-          <ul class="recomendation__c-list">
-            <li class="recomendation__c-list-e">
-              <div class="recomendation__c-list-e-img">
-                <img src="./assets/images/recomend.png" alt="recomend">
-              </div>
-              <span class="recomendation__c-list-e-footer tl3">
-                Mazars
-                <img src="./assets/images/icons/arrow-down-green.svg" alt=">">
-              </span>
-            </li>
-          </ul>
+          <div class="desktop recomendation__c-desktop">
 
-          <button class="loadMore">
-            Загрузить еще
-            <img src="./assets/images/icons/arrow-down-green.svg" alt="V">
-          </button>
-        
+            <ul class="recomendation__c-list">
+              <li class="recomendation__c-list-e">
+                <div class="recomendation__c-list-e-img">
+                  <img src="./assets/images/recomend.png" alt="recomend">
+                </div>
+                <span class="recomendation__c-list-e-footer tl3">
+                  Mazars
+                  <img src="./assets/images/icons/arrow-down-green.svg" alt=">">
+                </span>
+              </li>
+            </ul>
+
+            <button class="loadMore">
+              Загрузить еще
+              <img src="./assets/images/icons/arrow-down-green.svg" alt="V">
+            </button>
+          </div>
+
+          <div class="mobile recomendation__c-slider">
+            <div class="recomendation__c-slider-top">
+              <p class="txt-wrap txt18">Нас рекомендуют 
+                более 30 компаний</p>
+              
+              <div class="swiper-btn-container">
+                <button class="swiper-btn swiper-btn-prev "></button>
+                <button class="swiper-btn swiper-btn-next "></button>
+              </div>
+             </div>
+
+             <div class="swiper">
+                <ul class="swiper-wrapper">
+                  <li class="recomendation__c-list-e swiper-slide">
+                    <div class="recomendation__c-list-e-img">
+                      <img src="./assets/images/recomend.png" alt="recomend">
+                    </div>
+                    <span class="recomendation__c-list-e-footer tl3">
+                      Mazars
+                      <img src="./assets/images/icons/arrow-down-green.svg" alt=">">
+                    </span>
+                  </li>
+                  <li class="recomendation__c-list-e swiper-slide">
+                    <div class="recomendation__c-list-e-img">
+                      <img src="./assets/images/recomend.png" alt="recomend">
+                    </div>
+                    <span class="recomendation__c-list-e-footer tl3">
+                      Mazars
+                      <img src="./assets/images/icons/arrow-down-green.svg" alt=">">
+                    </span>
+                  </li>
+                  <li class="recomendation__c-list-e swiper-slide">
+                    <div class="recomendation__c-list-e-img">
+                      <img src="./assets/images/recomend.png" alt="recomend">
+                    </div>
+                    <span class="recomendation__c-list-e-footer tl3">
+                      Mazars
+                      <img src="./assets/images/icons/arrow-down-green.svg" alt=">">
+                    </span>
+                  </li>
+                </ul>
+
+              </div>
+
+
+          </div>
+
+
+
+
         </div>
       </section>
 

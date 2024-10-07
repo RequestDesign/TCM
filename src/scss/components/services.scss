@@ -1,8 +1,9 @@
 .service {
     &__c {
-        display: flex;
-        flex-direction: column;
-        gap: 10rem;
+       & .tl1{
+        margin-top: 3.2rem;
+        margin-bottom: 10rem;
+       }
 
         &-list {
             display: flex;

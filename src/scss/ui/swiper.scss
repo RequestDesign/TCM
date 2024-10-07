@@ -42,7 +42,7 @@
         }
     }
     &:disabled{
-        background-color: $gray;
+        background-color: $gray !important;
         cursor: default;
     }
 }

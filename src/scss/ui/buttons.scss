@@ -23,13 +23,17 @@
        
         transform: rotate(-90deg) translateY(0);
         transition: transform .5s;
+        @include small-tablet{
+        top: -1rem;
+        }
 
     }
 }
 
 .btn-green,
 .btn-white,
-.btn-tr {
+.btn-tr,
+.btn-header {
     width: fit-content;
     display: flex;
     align-items: center;
@@ -69,11 +73,15 @@
 
 /*  */
 .btn-tr {
-    border-color: $gray-main;
+    border-color: $gray;
     color: $white;
 
     &:hover {
         border-color: $gray;
         color: $black;
     }
+}
+.btn-header{
+    border-color: $gray;
+    
 }

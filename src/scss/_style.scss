@@ -32,6 +32,7 @@ body {
   // overflow: hidden;
 }
 
+
 .container {
   width: 178rem;
   margin: 0 auto;
@@ -60,16 +61,15 @@ main {
     }
 
     &._first {
-      margin-top: 14rem;
+      margin-top: 18rem;
 
-      @include small-tablet {
-        margin-top: 18rem;
-      }
+     
     }
     
   }
 
 }
+
 
 .desktop {
   display: block;
