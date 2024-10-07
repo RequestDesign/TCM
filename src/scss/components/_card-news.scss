@@ -119,13 +119,13 @@
         font-family: EuropeExt;
         padding-right:6rem;
 
-        background-image: url(../../assets/images/icons/arrow-down-green.svg);
+        background-image: url(./assets/images/icons/arrow-down-green.svg);
         background-position: right;
         background-repeat: no-repeat;
         background-size: contain;
         
         &._opened{
-        background-image: url(../../assets/images/icons/arrow-up-green.svg);
+        background-image: url(./assets/images/icons/arrow-up-green.svg);
 
         }
 

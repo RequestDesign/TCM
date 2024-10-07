@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>ui</title>
+<script defer src="main.js"></script></head>
+
+<body>
+  <div class="wrapper">
+    <main class="disable-margin">
+      <section>
+
+        <div class="container ">
+          <p class="clipboard-info">
+
+          </p>
+          <h2>typo</h2>
+          <ul>
+            <li class="tl1">tl1</li>
+            <li class="tl2">tl2</li>
+            <li class="tl3">tl3</li>
+            <li class="txt24">txt24</li>
+            <li class="txt20">txt20</li>
+            <li class="txt18">txt18</li>
+            <li class="txt14">txt14</li>
+          </ul>
+          <h2>inputs</h2>
+          <ul>
+            <li class="clipboard w-fit">
+              <label class="input-text form-input ">
+                <span class="input-text-input">
+                  <input type="text" data-required="y" placeholder="input-text">
+                </span>
+
+                <span class="input-text-error"></span>
+              </label>
+            </li>
+            <li class="clipboard">
+              <label class="checkbox form-input">
+                <input type="checkbox" data-required="y" name="policy">
+                <span class="checkbox-check"></span>
+
+                <span class="checkbox-text txt14">Принимаю политику конфиденциальности</span>
+              </label>
+            </li>
+
+
+          </ul>
+          <h2>buttons</h2>
+          <ul>
+            <li class="clipboard">
+              <a href="#" class="btn-arrow txt16">
+                view more
+                <img src="./assets/images/icons/arrow-down-green.svg" alt="arrow">
+              </a>
+            </li>
+            <li class="clipboard">
+              <button class="btn-green">
+                ОСТАВИТЬ ЗАЯВКУ
+                <img src="./assets/images/icons/mail-black.svg" alt="mail">
+              </button>
+            </li>
+            <li class="clipboard">
+              <button class="btn-white">
+                ОСТАВИТЬ ЗАЯВКУ
+                <img src="./assets/images/icons/mail-black.svg" alt="mail">
+              </button>
+            </li>
+            <li class="clipboard">
+              <button class="btn-tr">
+                ОСТАВИТЬ ЗАЯВКУ
+                <img src="./assets/images/icons/mail-black.svg" alt="mail">
+              </button>
+            </li>
+            <li class="clipboard">
+              <div class="swiper-btn-container">
+                <button class="swiper-btn swiper-btn-prev "></button>
+                <button class="swiper-btn swiper-btn-next "></button>
+              </div>
+
+            </li>
+
+            <li class="clipboard">
+              <div class="swiper-pagination">
+
+              </div>
+            </li>
+
+          </ul>
+
+          <h2>different</h2>
+          <ul>
+            <li class="clipboard">
+              <button class="loadMore">
+                Загрузить еще
+                <img src="./assets/images/icons/arrow-down-green.svg" alt="V">
+              </button>
+            </li>
+            <li class="clipboard">
+
+              <ul class="marked-list">
+                <li>marked-list marked-list marked-list</li>
+                <li>marked-list marked-list marked-list</li>
+              </ul>
+
+
+            </li>
+
+            <li class="clipboard">
+              <div class="section-heading">
+                <p class="section-heading-name">Наш подход</p>
+                <h2 class="tl2 section-heading-ttl">ответственное
+                  отношение и высокий уровень
+                  качества предоставляемых услуг
+                </h2>
+                <p class="section-heading-body">
+                  Благодаря этому мы успешно реализовали огромное
+                  количество интересных проектов для крупных российских
+                  и международных компаний
+                </p>
+              </div>
+
+
+            </li>
+
+            <li class="clipboard">
+              <div class="section-heading-swiper">
+
+                <div class="swiper-btn-container nav">
+                  <button class="swiper-btn swiper-btn-prev "></button>
+                  <button class="swiper-btn swiper-btn-next "></button>
+                </div>
+
+                <h2 class="tl2 txt-up name">
+                  наши проекты
+                </h2>
+
+
+                <a href="#" class="btn-arrow txt16 txt-up loadmore">
+                  Смотреть все
+                  <img src="./assets/images/icons/arrow-down-green.svg" alt="arrow">
+                </a>
+
+
+              </div>
+
+
+        </div>
+        </li>
+        </ul>
+
+  </div>
+  </section>
+  </main>
+  </div>
+
+
+  <script>
+    const info = document.querySelector('.clipboard-info')
+    const target = document.querySelectorAll('.clipboard')
+    target.forEach((e) => e.addEventListener('click', (ev) => {
+      const tempInput = document.createElement('textarea');
+      tempInput.value = ev.currentTarget.innerHTML;
+      document.body.appendChild(tempInput);
+
+      // Выделяем текст
+      tempInput.select();
+      tempInput.setSelectionRange(0, 99999); // для мобильных устройств
+
+      // Копируем текст
+      document.execCommand('copy');
+
+      // Удаляем временное поле
+      document.body.removeChild(tempInput);
+
+      /*  navigator.clipboard.writeText(ev.currentTarget.innerHTML) */
+      info.textContent = `copied into clipboard: ${ev.currentTarget.children[0].classList.value}`
+
+    }))
+
+  </script>
+  <style>
+    @charset "UTF-8";
+    @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200&display=swap');
+
+    * {
+      padding: 0;
+      margin: 0;
+      border: 0;
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      /* height: 100%; */
+      width: 100%;
+      /* min-width: 32rem; */
+      background: #eeeef0;
+      color: #191817;
+      /* overflow: hidden; */
+      display: flex;
+      justify-content: center;
+    }
+
+    html {
+      font-size: 0.5208335vw;
+    }
+
+    body {
+      font-family: sans-serif;
+      font-size: 100%;
+      line-height: 1;
+      font-size: 2.5rem;
+      user-select: none;
+    }
+
+
+
+    ul,
+    ol {
+      margin-bottom: 10rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      align-items: center;
+      border: 1px solid red;
+    }
+
+    ul li,
+    ol li {
+      font-size: 2.3rem;
+    }
+
+    li {
+      margin-bottom: 2rem;
+      font-size: 2rem;
+    }
+
+    .flex {
+      display: flex;
+      gap: 2rem;
+    }
+
+
+    a {
+      text-decoration: none;
+    }
+
+    a {
+      color: #191817;
+      transition: color 0.5s ease;
+    }
+
+
+
+
+
+    @media (max-width: 48em) {
+      html {
+        font-size: 1.5625vw;
+      }
+    }
+  </style>
+</body>
+
+</html>

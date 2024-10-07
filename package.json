@@ -7,6 +7,7 @@
     "dev": "set NODE_ENV=development&&webpack serve --watch",
     "build-dev": "set NODE_ENV=development&&webpack",
     "build-prod": "set NODE_ENV=production&&webpack",
+    "deploy":  "npm run build-dev&&gh-pages -d dist",
     "build": "webpack",
     "clear": "rd /s /q dist"
   },
@@ -26,6 +27,7 @@
     "css-loader": "^6.8.1",
     "dom-parser": "^0.1.6",
     "file-loader": "^6.2.0",
+    "gh-pages": "^6.1.1",
     "glob": "^10.3.10",
     "group-css-media-queries-loader": "^4.3.0",
     "html-loader": "^4.2.0",
