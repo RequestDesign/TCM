@@ -15,6 +15,9 @@
         align-items: center;
         width: 100%;
         padding: 1.4rem 2rem;
+     & input{
+        width: 13rem;
+     }
 
         @include small-tablet {
             & input {
@@ -25,25 +28,26 @@
 
         &-arrow {
             transition: all .5s;
-            border: 1rem solid transparent;
-            border-bottom: 1rem solid $green;
-            border-top: 0rem solid $green ;
+            border: .8rem solid transparent;
+            border-bottom: 0rem solid $green;
+            border-top: .8rem solid $green ;
 
             @include small-tablet {
                 border: 2rem solid transparent;
-                border-bottom: 2rem solid $green;
-                border-top: 0rem solid $green ;
+                border-bottom: 0rem solid $green;
+                border-top: 2rem solid $green ;
             }
         }
 
         &._opened {
             & .select__target-arrow {
-                border-bottom: 0rem solid $green;
-                border-top: 1rem solid $green ;
+                border-bottom: .8rem solid $green;
+                border-top: 0rem solid $green ;
+       
 
                 @include small-tablet {
-                    border-bottom: 0rem solid $green;
-                    border-top: 2rem solid $green ;
+                    border-bottom: 2rem solid $green;
+                    border-top: 0rem solid $green ;
                 }
             }
         }

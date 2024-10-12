@@ -35,6 +35,8 @@
 
                 & h3 {
                     grid-area: name;
+                    display: flex;
+                    gap: 3rem;
            
                     @include desktop{
                         width: fit-content;
@@ -44,6 +46,7 @@
                     
                     @include small-tablet {
                         text-align: right;
+                        gap: 4rem;
                         
                     }
                 }

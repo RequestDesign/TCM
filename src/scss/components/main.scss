@@ -9,6 +9,7 @@
 
             & p {
                 padding: 0 4rem ;
+                text-transform: uppercase;
                 @include small-tablet{
                     padding: 0;
                     justify-self: flex-end;
@@ -28,18 +29,19 @@
 .princeples{
     display: flex;
     flex-direction: column;
-    & .section-bg{
-     @include small-tablet{
-        min-height: 120rem;
-     }   
-    }
+  
     &__top{
         display: flex;
+        @include desktop{
+            margin-top: 54rem;
+
+        }
         & .tl2{
           
             white-space: pre-line;
             width: fit-content;
             color: $white;
+           
          
         }
     }

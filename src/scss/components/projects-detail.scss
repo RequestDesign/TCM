@@ -85,7 +85,7 @@
 
     &__stats {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: .8fr 1.2fr 1fr;
 
         @include small-tablet {
             grid-template-columns: 100%;
@@ -93,18 +93,20 @@
 
         &-e {
 
-            padding-left: 10.5rem;
-            border-left: .1rem solid $gray;
-
-            &:first-of-type {
-                padding: 0;
-                border: none;
+            &:nth-of-type(2){
+                padding-left:10.5rem;
+                margin-right:10.5rem;
+                border-right: .1rem solid $gray;
+                border-left: .1rem solid $gray;
+                @include small-tablet {
+                    padding: 0;
+                    margin: 0;
+                    border: none;
+                }
             }
+          
 
-            @include small-tablet {
-                padding: 0;
-                border: none;
-            }
+           
 
             & .tl3 {
                 margin-top: 3rem;

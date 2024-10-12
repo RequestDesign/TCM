@@ -47,9 +47,7 @@
 
 .about-adv {
     &__c {
-        display: flex;
-        flex-direction: column;
-        gap: 7.8rem;
+    
 
         &-list{
             display: grid;
@@ -112,4 +110,7 @@
             grid-template-columns: 100%;
         }
     }
+}
+.about-command__c{
+    gap:9rem 36rem  ;
 }

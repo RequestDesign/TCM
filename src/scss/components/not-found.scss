@@ -14,7 +14,7 @@
     }
 
     &__c {
-        margin-top: 10rem;
+        margin-top: 21rem;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -24,12 +24,14 @@
         &-code {
             font-family: EuropeExt;
             font-size: 40rem;
-            line-height: 105%;
+            line-height: 100%;
             font-weight: 700;
             background-clip: text;
             -webkit-background-clip: text;
             color: transparent;
             background-image: url(./assets/images/projects.webp);
+            background-size: cover;
+            background-position: right;
 
             @include small-tablet {
                 font-size: 24rem;
@@ -38,7 +40,6 @@
         }
 
         & .btn-green {
-            margin-top: 5rem;
             background-color: $green;
             color: $white;
         }

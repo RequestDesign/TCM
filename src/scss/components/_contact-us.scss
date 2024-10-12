@@ -48,12 +48,14 @@
             grid-row: 1 / span 2;
             align-self: center;
             font-family: EuropeExt;
+            margin-bottom: 26rem;
 
             @include small-tablet {
                 grid-column: 1;
                 grid-row: 2;
                 color: $black;
                 font-size: 2.8rem;
+                margin-bottom: 0
             }
         }
 
@@ -110,10 +112,16 @@
             & button[type='submit']{
                 @include small-tablet{
                     width: 100%;
-                    border-color: $gray-main;
                     justify-content: center;
                 }
                
+            }
+            & .btn-green{
+                border-color: $gray-main;
+                &:hover{
+                    border-color: $green;
+                }
+
             }
 
         }

@@ -18,11 +18,24 @@
   src: local('EuropeExt'), local('EuropeExt'),
       url('./assets/fonts/EuropeExt.eot?#iefix') format('embedded-opentype'),
       url('./assets/fonts/EuropeExt.woff') format('woff'),
-      url('./assets/fonts/Gilroy.ttf') format('truetype');
+      url('./assets/fonts/EuropeExt.woff2') format('woff2'),
+      url('./assets/fonts/EuropeExt.ttf') format('ttf');
+
   font-weight: 400;
   font-style: normal;
 }
 
+@font-face {
+  font-family: 'EuropeExt';
+  src: url('./assets/fonts/EuropeExt Bold.eot');
+  src: local('EuropeExt'), local('EuropeExt'),
+      url('./assets/fonts/EuropeExt Bold.eot?#iefix') format('embedded-opentype'),
+      url('./assets/fonts/EuropeExt Bold.woff') format('woff'),
+      url('./assets/fonts/EuropeExt Bold.woff2') format('woff2'),
+      url('./assets/fonts/EuropeExt Bold.ttf') format('ttf');
+  font-weight: 700;
+  font-style: normal;
+}
 
 
 
