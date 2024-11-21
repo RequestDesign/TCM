@@ -4,8 +4,22 @@
         flex-direction: column;
         gap: 3.2rem;
 
+        @include small-tablet {
+            padding: 0;
+        }
+
+        & .bread {
+            @include small-tablet {
+                padding: 0 3rem;
+            }
+        }
+
         & .tl1 {
             font-size: 5rem;
+
+            @include small-tablet {
+                padding: 0 3rem;
+            }
         }
 
         &-desktop {
@@ -24,11 +38,12 @@
             gap: 3.2rem;
 
             &-e {
-                box-shadow:inset 0px 0px 0px .1rem $gray;
+                box-shadow: inset 0px 0px 0px .1rem $gray;
                 padding: 3rem;
                 box-sizing: border-box;
-                @include small-tablet{
-               box-shadow:inset 0px 0px 0px .2rem $gray;
+
+                @include small-tablet {
+                    box-shadow: inset 0px 0px 0px .2rem $gray;
                 }
 
                 &-img {
@@ -44,10 +59,11 @@
                     & img {
                         object-fit: cover;
                         object-position: center;
-                        @include small-tablet{
-                            object-fit: contain;
+
+                        @include small-tablet {
+                            object-fit: cover;
                         }
-                        
+
                     }
                 }
 
@@ -75,6 +91,10 @@
                 display: flex;
                 justify-content: space-between;
                 margin: 8rem 0 12rem;
+
+                @include small-tablet {
+                    padding: 0 3rem;
+                }
             }
 
             & .swiper {

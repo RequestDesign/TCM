@@ -16,6 +16,12 @@
   }
 }
 
+@mixin mobile {
+  @media (max-width: 48em) {
+    @content;
+  }
+}
+
 @mixin same-size($w, $h) {
   width: $w;
   height: $h;

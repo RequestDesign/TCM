@@ -49,6 +49,9 @@
                         gap: 4rem;
                         
                     }
+                    & span::before{
+content: '0';
+                    }
                 }
                 &_reverse {
                     grid-template-columns: .8fr 1.2fr;

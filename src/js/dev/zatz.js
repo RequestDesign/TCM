@@ -3,6 +3,8 @@ import Swiper from 'swiper'
 import { Grid, Navigation, Pagination, Autoplay, EffectFade } from 'swiper/modules'
 import { rem } from '../utils/constants'
 import initForms from '../utils/forms'
+import { Fancybox } from '@fancyapps/ui'
+import Marquee from '../utils/Marquee'
 
 
 $(function () {
@@ -12,9 +14,29 @@ $(function () {
     dropDowns()
     initSelect()
     reviewOpener()
-    headerScrollLisneter()
-   
+   /*  headerScrollLisneter() */
+    initFancybox()
+    initMarque()
+    initCounter()
 })
+
+function initFancybox() {
+    const anytarget = document.querySelector('[data-fancybox]')
+    if (!anytarget) return
+
+
+
+    Fancybox.bind('[data-fancybox]', {
+        Thumbs: false,
+        Toolbar: {
+            display: {
+                left: [],
+                middle: ["infobar"],
+                right: ["close"],
+            },
+        },
+    })
+}
 
 function initSwipers() {
     const ourProjects = document.querySelector('.our-projects')
@@ -22,14 +44,14 @@ function initSwipers() {
         new Swiper(ourProjects.querySelector('.swiper'), {
             loop: true,
             modules: [Navigation],
-            slidesPerView: 1,
-            slidesPerGroup: 1,
+            slidesPerView: 1.15,
             centeredSlides: true,
             initialSlide: 3,
             spaceBetween: rem(3),
             slideActiveClass: 'our-projects-item_active',
             slideNextClass: 'our-projects-item_prev',
             slidePrevClass: 'our-projects-item_next',
+          
             breakpoints: {
                 768: {
                     slidesPerView: 4,
@@ -110,7 +132,8 @@ function initSwipers() {
     if (recomendation) {
         new Swiper(recomendation.querySelector('.swiper'), {
             modules: [Navigation],
-            slidesPerView: 1,
+            slidesPerView: 1.2,
+            centeredSlides: true,
             spaceBetween: rem(3),
             navigation: {
                 prevEl: recomendation.querySelector('.swiper-btn-prev'),
@@ -271,20 +294,20 @@ function reviewOpener() {
 
 }
 
-function headerScrollLisneter(){
- 
+function headerScrollLisneter() {
+
     const header = document.querySelector('.header')
-    if(!header) return
+    if (!header) return
 
     window.addEventListener('scroll', (e) => {
         if (window.innerWidth < 769) return
 
-        if (scrollY > 0 ) {
+        if (scrollY > 0) {
             header.classList.add('_cliped')
-           
+
 
         } else {
-          
+
             header.classList.remove('_cliped')
 
         }
@@ -294,3 +317,48 @@ function headerScrollLisneter(){
     })
 }
 
+function initMarque() {
+    const target = document.querySelector('.clients');
+    if (!target) return
+    new Marquee(target, window.innerWidth > 768 ? 400 : 180)
+
+    const reverse = document.querySelector('.clients._rev');
+    if (!reverse) return
+    new Marquee(reverse, window.innerWidth > 768 ? 400 : 180, true)
+
+}
+
+function initCounter() {
+    if (!document.querySelector('.princeples__bottom')) return
+    const target = document.querySelector('.princeples__bottom'),
+        counts = Array.from(target.querySelectorAll('[data-counter]'))
+
+    function onScroll() {
+        if (window.innerHeight - 200 > target.getBoundingClientRect().top) {
+            counts.forEach(countEl => startCounter(countEl));
+            window.removeEventListener('scroll', onScroll);
+        }
+    }
+
+    window.addEventListener('scroll', onScroll);
+
+    function startCounter(countEl) {
+        const val = parseInt(countEl.dataset.counter, 10); // Считываем конечное значение
+        countEl.textContent = 0;
+
+        let currentVal = 0;
+        const duration = 3000; // Длительность анимации в миллисекундах
+        const interval = 50; // Интервал обновления значения
+        const step = val / (duration / interval); // Шаг увеличения
+
+        const counterInterval = setInterval(() => {
+            currentVal += step;
+            if (currentVal >= val) {
+                countEl.textContent = val; // Устанавливаем конечное значение
+                clearInterval(counterInterval); // Останавливаем интервал
+            } else {
+                countEl.textContent = Math.floor(currentVal); // Устанавливаем текущее значение
+            }
+        }, interval);
+    }
+}

@@ -34,12 +34,15 @@
         color: $green;
         font-weight: 500;
         flex-shrink: 0;
+        @include desktop{
+            line-height: 6rem;
+            height: fit-content;
+        }
 
     }
 
     &-ttl {
         grid-area: ttl;
-        white-space: pre-line;
         text-transform: uppercase;
     }
 
@@ -50,7 +53,7 @@
 
     &-body {
         grid-area: body;
-        white-space: pre-line;
+        
         margin-bottom: 9rem;
         font-family: Euclid Circular A;
         font-size: 4rem;

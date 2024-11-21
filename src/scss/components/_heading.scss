@@ -1,32 +1,41 @@
-.heading{
+.heading {
     padding-top: 0 !important;
- 
-    &__c{
+    background-color: rgba(0, 0, 0, 0.2);
+
+    &__c {
         flex-grow: 1;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
 
-       
-        &-top{
-          
-           max-width: 90rem;
-           text-transform: uppercase;
+
+        &-top {
+
+            max-width: 90rem;
+            text-transform: uppercase;
         }
-        &-bottom{
-          margin-top: 28rem;
+
+        &-bottom {
+            margin-top: 28rem;
             margin-left: auto;
             width: fit-content;
-            @include small-tablet{
+
+            @include small-tablet {
                 margin-top: 63rem;
                 margin-left: 0;
             }
-            & p{
-                white-space: pre-line;
+
+            & p {
+
                 font-weight: 600;
-                @include small-tablet{
+
+                @include desktop {
+                    max-width: 42rem;
+                }
+
+                @include small-tablet {
                     font-size: 3rem;
-                   
+
                 }
             }
         }

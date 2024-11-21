@@ -10,6 +10,10 @@
         &-img {
             overflow: hidden;
             display: flex;
+            height: 40rem;
+            @include mobile{
+                height: 60rem;
+            }
             & img {
                 max-width: 100%;
                 object-fit: cover;
@@ -19,6 +23,11 @@
         &-name{
             @include wrap-text(2);
             margin: 3rem 2.4rem;
+            font-family: EuropeExt;
+            @include small-tablet{
+                font-size: 3.4rem;
+
+            }
 
         }
         &-footer{

@@ -2,9 +2,13 @@
     background-color: $bg;
     position: relative;
 
-    
-  
 
+
+    & .tl2 {
+        @include small-tablet{
+            font-size: 8rem;
+        }
+    }
 
     & .swiper {
         position: relative;
@@ -59,7 +63,8 @@
                 background-size: 50%;
                 width: 10rem;
                 height: 10rem;
-                &:active{
+
+                &:active {
                     background-color: $gray !important;
                 }
 
@@ -93,20 +98,21 @@
 
         &-e {
 
-            &:nth-of-type(2){
-                padding-left:10.5rem;
-                margin-right:10.5rem;
+            &:nth-of-type(2) {
+                padding-left: 10.5rem;
+                margin-right: 10.5rem;
                 border-right: .1rem solid $gray;
                 border-left: .1rem solid $gray;
+
                 @include small-tablet {
                     padding: 0;
                     margin: 0;
                     border: none;
                 }
             }
-          
 
-           
+
+
 
             & .tl3 {
                 margin-top: 3rem;
@@ -213,17 +219,18 @@
 
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 68rem;
+        grid-auto-rows: 68rem;
         gap: 3rem;
 
         @include small-tablet {
             grid-template-columns: 100%;
-            grid-auto-rows: 68rem;
+            grid-auto-rows: 90rem;
         }
 
         &-e {
             display: flex;
-            & img{
+
+            & img {
                 object-fit: cover;
                 object-position: center;
 
