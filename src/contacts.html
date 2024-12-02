@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Главная</title>
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <include src="./components/_header.html"></include>
+        <include src="./components/_header-mobile.html"></include>
+        <main>
+            <section class="news news-heading section-bg ">
+                <div class="section-bg-img">
+                    <img src="./assets/images/heading.webp" alt="heading">
+                </div>
+                <!--  <div class="container bread-overlay">
+                  <div class=" bread_white">
+                    <include src="./components/_bread.html"></include>
+                  </div>
+                </div> -->
+
+                <div class="container section-bg__c">
+                    <h1 class="tl1 col-wh news-ttl txt-up">контакты</h1>
+                </div>
+
+            </section>
+            <!-- тебе нужна она -->
+            <section class="contacts">
+                <div class="container contacts__c">
+                    <div class="contacts__c-cell">
+                        <p class="tl3 txt-up">Контактные данные</p>
+                        <ul class="contacts__c-cell-grid">
+                            <li class="contacts__c-cell-grid-e">
+                                <p class="txt20 col-gr">Адрес:</p>
+                                <div class="contacts__c-cell-grid-e-links">
+                                    <a href="link to map maybe" class="txt20 contacts__c-cell-grid-e-links-e">
+                                        Москва, 127018,
+                                        Новодмитровская ул., 2 к. 2
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="contacts__c-cell-grid-e">
+                                <p class="txt20 col-gr">Номер телефона:</p>
+                                <div class="contacts__c-cell-grid-e-links">
+                                    <a href="tel:1488228" class="txt20 contacts__c-cell-grid-e-links-e">
+                                        +7 (499) 136 26 49
+                                    </a>
+                                    <a href="tel:1488228" class="txt20 contacts__c-cell-grid-e-links-e">
+                                        +7 (499) 136 26 49
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="contacts__c-cell-grid-e">
+                                <p class="txt20 col-gr">Почта:</p>
+                                <div class="contacts__c-cell-grid-e-links">
+                                    <a href="mailto:zalupa@ivanicha.ru" class="txt20 contacts__c-cell-grid-e-links-e">
+                                        info@t-c-m.ru
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="contacts__c-cell-grid-e">
+                                <p class="txt20 col-gr">Социальные сети:</p>
+                                <div class="contacts__c-cell-grid-e-links _social">
+                                    <a href="telega" class="txt20 contacts__c-cell-grid-e-links-e">
+
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M1.68 1.68C3.17891e-07 3.376 0 6.088 0 11.52V12.48C0 17.904 3.17891e-07 20.616 1.68 22.32C3.376 24 6.088 24 11.52 24H12.48C17.904 24 20.616 24 22.32 22.32C24 20.624 24 17.912 24 12.48V11.52C24 6.096 24 3.384 22.32 1.68C20.624 3.17891e-07 17.912 0 12.48 0H11.52C6.096 0 3.384 3.17891e-07 1.68 1.68ZM4.048 7.304H6.8C6.888 11.88 8.904 13.816 10.504 14.216V7.304H13.088V11.248C14.664 11.08 16.328 9.28 16.888 7.296H19.464C19.2538 8.32296 18.8342 9.29556 18.2313 10.1531C17.6284 11.0106 16.8552 11.7347 15.96 12.28C16.9592 12.7772 17.8417 13.4806 18.5491 14.3438C19.2566 15.2071 19.7729 16.2105 20.064 17.288H17.224C16.616 15.392 15.096 13.92 13.088 13.72V17.288H12.768C7.296 17.288 4.176 13.544 4.048 7.304Z"
+                                                fill="#0077FF" />
+                                        </svg>
+
+                                    </a>
+                                    <a href="vkantakle" class="txt20 contacts__c-cell-grid-e-links-e">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_8008_11170)">
+                                                <path
+                                                    d="M12 0C8.81812 0 5.76375 1.26506 3.51562 3.51469C1.2652 5.76522 0.000643966 8.81734 0 12C0 15.1813 1.26562 18.2357 3.51562 20.4853C5.76375 22.7349 8.81812 24 12 24C15.1819 24 18.2362 22.7349 20.4844 20.4853C22.7344 18.2357 24 15.1813 24 12C24 8.81869 22.7344 5.76431 20.4844 3.51469C18.2362 1.26506 15.1819 0 12 0Z"
+                                                    fill="url(#paint0_linear_8008_11170)" />
+                                                <path
+                                                    d="M5.43087 11.873C8.92962 10.349 11.2621 9.3443 12.4284 8.8588C15.7621 7.47261 16.454 7.23186 16.9059 7.2237C17.0052 7.22211 17.2265 7.24667 17.3709 7.36339C17.4909 7.46183 17.5246 7.59495 17.5415 7.68842C17.5565 7.7818 17.5771 7.99461 17.5602 8.16074C17.3802 10.0582 16.5984 14.6629 16.2009 16.7882C16.034 17.6874 15.7021 17.9889 15.3815 18.0184C14.684 18.0825 14.1552 17.5579 13.4802 17.1155C12.4246 16.4231 11.8284 15.9922 10.8027 15.3167C9.61774 14.5359 10.3865 14.1067 11.0615 13.4055C11.2377 13.2219 14.309 10.4291 14.3671 10.1758C14.3746 10.1441 14.3821 10.026 14.3109 9.96373C14.2415 9.9013 14.1384 9.92267 14.0634 9.93955C13.9565 9.96355 12.2709 11.0788 9.00087 13.2851C8.52274 13.614 8.08962 13.7743 7.69962 13.7659C7.27212 13.7567 6.44712 13.5236 5.83399 13.3245C5.08399 13.0802 4.48587 12.951 4.53837 12.536C4.56462 12.32 4.86274 12.099 5.43087 11.873Z"
+                                                    fill="white" />
+                                            </g>
+                                            <defs>
+                                                <linearGradient id="paint0_linear_8008_11170" x1="1200" y1="0" x2="1200"
+                                                    y2="2400" gradientUnits="userSpaceOnUse">
+                                                    <stop stop-color="#2AABEE" />
+                                                    <stop offset="1" stop-color="#229ED9" />
+                                                </linearGradient>
+                                                <clipPath id="clip0_8008_11170">
+                                                    <rect width="24" height="24" fill="white" />
+                                                </clipPath>
+                                            </defs>
+                                        </svg>
+
+
+                                    </a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="contacts__c-cell">
+                        <p class="tl3 txt-up">Форма обратной связи</p>
+
+                        <form class="form">
+
+                            <label class="input-text form-input ">
+                                <span class="input-text-input">
+                                    <input type="text" data-required="y" name="name" placeholder="Имя">
+                                </span>
+
+                                <span class="input-text-error"></span>
+                            </label>
+
+
+                            <label class="input-text form-input ">
+                                <span class="input-text-input">
+                                    <input type="text" name="phone" data-required="y" placeholder="Телефон">
+                                </span>
+
+                                <span class="input-text-error"></span>
+                            </label>
+
+
+                            <label class="input-text form-input ">
+                                <span class="input-text-input">
+                                    <input type="text"  name="commentary" placeholder="Комментарий">
+                                </span>
+
+                                <span class="input-text-error"></span>
+                            </label>
+
+
+                            <button class="btn-green txt16">
+                                ОСТАВИТЬ ЗАЯВКУ
+                            </button>
+
+
+                            <label class="checkbox form-input">
+                                <input type="checkbox" data-required="y" name="policy">
+                                <span class="checkbox-check"></span>
+
+                                <span class="checkbox-text txt14">Принимаю политику конфиденциальности</span>
+                            </label>
+
+
+                        </form>
+                    </div>
+                    <div class="contacts__c-cell" id="map">
+
+                    </div>
+                </div>
+            </section>
+            <!-- тебе нужна она -->
+        </main>
+        <include src="./components/_footer.html"></include>
+        <include src="./components/_modals.html"></include>
+        
+    </div>
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=baf2c816-f3bd-4189-98d8-72b7e716c191&lang=ru_RU" type="text/javascript"></script>
+  <script type="text/javascript">
+    ymaps.ready(init);
+    function init() {
+      var myMap = new ymaps.Map("map", {
+        center: [47.204572074287015, 39.67028549999995],
+        zoom: 16,
+        controls: ['fullscreenControl']
+      });
+     
+    }
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+.contacts {
+    &__c {
+        display: grid;
+        grid-template-columns: auto 50rem;
+        gap: 5rem 3rem;
+        padding-top: 5rem;
+        border-top: 2px solid $gray;
+        @include mobile{
+            grid-template-columns: 100%;
+            padding-top: 10rem;
+            border: none;
+        }
+
+        &-cell {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            @include mobile{
+                grid-template-columns: 100%;
+                gap: 6rem;
+            }
+
+            &#map {
+                grid-column: 2;
+                grid-row: 1 / span 2;
+                display: block;
+                overflow: hidden;
+                position: relative;
+                @include mobile{
+                    grid-column: 1;
+                    grid-row: 2;
+                    height: 70rem;
+                }
+            }
+
+            &-grid {
+                display: flex;
+                flex-direction: column;
+                gap: 3rem;
+
+                &-e {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    width: 100%;
+                    @include mobile{
+                        grid-template-columns: 100%;
+                    }
+                  
+
+                    &-links {
+                        width: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 1.5rem;
+
+                        &._social {
+                            flex-direction: row;
+                            gap: 1rem;
+                        }
+
+                        &-e {
+                            @media (hover: hover) {
+                                &:hover {
+
+                                    color: $green;
+                                    text-decoration: underline;
+                                }
+                            }
+
+                            & svg,
+                            & img {
+                                width: 4rem;
+                                height: 4rem;
+                                @include mobile{
+                                    width: 6rem;
+                                    height: 6rem;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            & .form{
+                display: flex;
+                flex-direction: column;
+                & .btn-green{
+                    background-color: $gray-main;
+                    color: $white;
+                    width: 100%;
+                    justify-content: center;
+                    margin-bottom: 3rem;
+                  @media (hover:hover) {
+                    &:hover{
+                        background-color: $green;
+                       
+                    }
+                  }
+                        
+                   
+                }
+            }
+
+        }
+    }
+}

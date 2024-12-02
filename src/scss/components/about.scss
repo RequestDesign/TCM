@@ -34,16 +34,19 @@
                     @include small-tablet{
                         text-align: center;
                     }
+                    &:last-of-type{
+                        @include desktop {
+                            & .txt18 {
+                               padding-left: 2rem;
+                            }
+                        }
+                    }
 
                     & .txt18 {
                         text-transform: lowercase;
                         display: flex;
 
-                        @include desktop {
-                            & span {
-                                width: 2rem;
-                            }
-                        }
+                       
 
                         @include small-tablet {
                             font-size: 3rem;
@@ -129,8 +132,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 7rem;
-
+    & .tl2{
+        margin-bottom: 7rem;
+    }
 
 }
 
