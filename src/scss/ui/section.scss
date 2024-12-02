@@ -12,9 +12,9 @@
             'name ttl'
             'link body';
 
-            & .section-heading-body{
-                margin: 0;
-            }
+        & .section-heading-body {
+            margin: 0;
+        }
     }
 
     @include small-tablet {
@@ -34,7 +34,8 @@
         color: $green;
         font-weight: 500;
         flex-shrink: 0;
-        @include desktop{
+
+        @include desktop {
             line-height: 6rem;
             height: fit-content;
         }
@@ -53,7 +54,7 @@
 
     &-body {
         grid-area: body;
-        
+
         margin-bottom: 9rem;
         font-family: Euclid Circular A;
         font-size: 4rem;
@@ -82,6 +83,7 @@
                 width: 100%;
                 height: 60rem;
             }
+
         }
 
     }
@@ -109,11 +111,40 @@
         width: 100%;
         height: 100%;
         overflow: hidden;
+        display: flex;
 
         & img {
             object-fit: cover;
             height: 100%;
 
+        }
+
+        &-video {
+            position: relative;
+            z-index: 1;
+            flex-grow: 1;
+            width: 100%;
+
+            & img {
+                top: 0;
+                left: 0;
+                position: absolute;
+                object-fit: cover;
+                z-index: 2;
+            }
+
+
+            & video {
+                top: 0;
+                left: 0;
+                position: absolute;
+                z-index: 1;
+                display: flex;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                pointer-events: none;
+            }
         }
     }
 

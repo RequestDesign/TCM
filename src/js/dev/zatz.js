@@ -14,10 +14,11 @@ $(function () {
     dropDowns()
     initSelect()
     reviewOpener()
-   /*  headerScrollLisneter() */
+    /*  headerScrollLisneter() */
     initFancybox()
     initMarque()
     initCounter()
+    initVideos()
 })
 
 function initFancybox() {
@@ -51,7 +52,7 @@ function initSwipers() {
             slideActiveClass: 'our-projects-item_active',
             slideNextClass: 'our-projects-item_prev',
             slidePrevClass: 'our-projects-item_next',
-          
+
             breakpoints: {
                 768: {
                     slidesPerView: 4,
@@ -360,5 +361,26 @@ function initCounter() {
                 countEl.textContent = Math.floor(currentVal); // Устанавливаем текущее значение
             }
         }, interval);
+    }
+}
+
+function initVideos() {
+    const vidos = document.querySelectorAll('.section-bg-img-video');
+    if (vidos) {
+        vidos.forEach((el) => {
+            const video = el.querySelector('video'),
+            placeholder = el.querySelector('img')
+         
+            if(placeholder){
+              
+                video.addEventListener('canplay', ()=>{
+                    console.log('hello');
+                    placeholder.style.display = 'none'; 
+                    video.style.display = 'flex';
+                })
+            }
+            
+        })
+
     }
 }
