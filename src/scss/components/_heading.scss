@@ -13,6 +13,15 @@
 
             max-width: 90rem;
             text-transform: uppercase;
+
+            &-main {
+                @include mobile {
+                    & .tl1{
+                        font-size: 8.4rem;
+                    }
+                   
+                }
+            }
         }
 
         &-bottom {

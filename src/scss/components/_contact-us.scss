@@ -6,7 +6,7 @@
 
     @include small-tablet {
         box-shadow: none;
-        padding:8rem 4rem ;
+        padding: 8rem 4rem;
         box-sizing: border-box;
     }
 
@@ -18,8 +18,8 @@
         position: absolute;
         z-index: -1;
         top: 0;
-            left: 0;
-        
+        left: 0;
+
 
         & img {
             object-fit: cover;
@@ -30,7 +30,7 @@
     &__c {
         display: grid;
         grid-template-columns: 1.1fr .5fr;
-        gap: 4rem 9.7rem;
+        gap: 4rem 0;
         grid-auto-rows: auto;
         padding-top: 12rem;
         box-sizing: border-box;
@@ -38,9 +38,12 @@
         @include small-tablet {
             grid-template-columns: 100%;
             background-color: rgba(255, 255, 255, 0.7);
-           padding: 4rem;
-         
-           
+            padding: 4rem;
+
+
+        }
+        & .tl2{
+            text-transform: uppercase;
         }
 
         &-aside {
@@ -49,6 +52,11 @@
             align-self: center;
             font-family: EuropeExt;
             margin-bottom: 26rem;
+
+            @include desktop {
+                margin-left: 9rem;
+                font-size: 2.1rem;
+            }
 
             @include small-tablet {
                 grid-column: 1;
@@ -62,7 +70,7 @@
         &-form {
             background: linear-gradient(0deg, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
                 linear-gradient(28.39deg, rgba(255, 255, 255, 0) 55.69%, rgba(255, 255, 255, 0.3) 81.78%);
-            margin-top: 4rem;
+            margin-top: 0;
             margin-bottom: 15rem;
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -73,9 +81,9 @@
             @include small-tablet {
                 background: none;
                 grid-template-columns: 100%;
-              margin: 0;
-             padding: 0;
-             gap: 2rem;
+                margin: 0;
+                padding: 0;
+                gap: 2rem;
             }
 
             &-row {
@@ -88,37 +96,45 @@
 
             &-toleft {
                 justify-self: flex-end;
-                @include small-tablet{
+
+                @include small-tablet {
                     justify-self: center;
                 }
             }
-            & .checkbox{
+
+            & .checkbox {
                 align-self: center;
-                @include small-tablet{
+
+                @include small-tablet {
                     margin-top: 4rem;
-                    
+
                 }
             }
 
             & .flex-row {
                 margin-top: 5rem;
-                @include small-tablet{
-                    margin:0 auto 4rem ;
-                    &:first-of-type{
+
+                @include small-tablet {
+                    margin: 0 auto 4rem;
+
+                    &:first-of-type {
                         margin-top: 8rem;
                     }
                 }
             }
-            & button[type='submit']{
-                @include small-tablet{
+
+            & button[type='submit'] {
+                @include small-tablet {
                     width: 100%;
                     justify-content: center;
                 }
-               
+
             }
-            & .btn-green{
+
+            & .btn-green {
                 border-color: $gray-main;
-                &:hover{
+
+                &:hover {
                     border-color: $green;
                 }
 

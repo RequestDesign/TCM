@@ -59,6 +59,11 @@
                         @include small-tablet{
                             font-size: 5.6rem;
                         }
+                        &._plus{
+                            &::after{
+                                content: '+';
+                            }
+                        }
                     }
                 }
             }
@@ -162,4 +167,9 @@
 
 .about-command__c {
     gap: 9rem 36rem;
+    & .section-heading-ttl{
+        @include desktop{
+            width: 70rem;
+        }
+    }
 }

@@ -3,6 +3,10 @@
         display: flex;
         flex-direction: column;
 
-       
+       & .section-heading-body{
+        @include desktop{
+            width: 119rem;
+        }
+       }
     }
 }

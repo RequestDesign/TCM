@@ -330,9 +330,10 @@ function initMarque() {
 }
 
 function initCounter() {
-    if (!document.querySelector('.princeples__bottom')) return
-    const target = document.querySelector('.princeples__bottom'),
-        counts = Array.from(target.querySelectorAll('[data-counter]'))
+    const target = document.querySelector('.counter')
+    if (!target) return
+
+    const counts = Array.from(target.querySelectorAll('[data-counter]'))
 
     function onScroll() {
         if (window.innerHeight - 200 > target.getBoundingClientRect().top) {
@@ -369,17 +370,17 @@ function initVideos() {
     if (vidos) {
         vidos.forEach((el) => {
             const video = el.querySelector('video'),
-            placeholder = el.querySelector('img')
-         
-            if(placeholder){
-              
-                video.addEventListener('canplay', ()=>{
+                placeholder = el.querySelector('img')
+
+            if (placeholder) {
+
+                video.addEventListener('canplay', () => {
                     console.log('hello');
-                    placeholder.style.display = 'none'; 
+                    placeholder.style.display = 'none';
                     video.style.display = 'flex';
                 })
             }
-            
+
         })
 
     }
