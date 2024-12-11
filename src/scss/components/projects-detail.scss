@@ -201,8 +201,9 @@
         }
 
         &-txt {
-            padding: 9rem 10rem;
+            padding: 1rem;
             box-sizing: border-box;
+            font-size: 3.2rem;
 
             @include small-tablet {
                 padding: 0;

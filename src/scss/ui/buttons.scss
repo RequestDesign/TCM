@@ -38,7 +38,7 @@
     display: flex;
     align-items: center;
     padding: 3.3rem 4rem;
-    gap: 2.4rem;
+    gap: 1rem;
     box-sizing: border-box;
     border: .2rem solid transparent;
     text-transform: uppercase;
@@ -46,7 +46,7 @@
 
     & img,
     & svg {
-        @include same-size(3.1rem, 3.1rem);
+        @include same-size(2.4rem, 2.4rem);
     }
 
 }

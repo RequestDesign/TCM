@@ -48,28 +48,38 @@
                     @include small-tablet {
                         height: 69rem;
                     }
-                    & img{
+
+                    & img {
                         object-fit: cover;
                         object-position: center;
                     }
                 }
-                &-body{
+
+                &-body {
                     grid-area: body;
                     padding: 7.7rem;
                     box-sizing: border-box;
                     border: .1rem solid $gray;
                     display: flex;
                     flex-direction: column;
-                    justify-content: flex-end;
                     gap: 1.6rem;
-                    @include small-tablet{
+
+                    @include small-tablet {
                         padding: 4rem;
                     }
-                    &-link{
-                        margin-top: 1.6rem;
-                        font-weight:500 ;
+
+                    &-link {
+                        margin-top: auto;
+                        font-weight: 500;
+
+                        & img {
+                            top: -0.5rem !important;
+                            width: 3.6rem;
+                            height: 3.6rem;
+                            right: -1rem;
+                        }
                     }
-                    
+
                 }
             }
         }

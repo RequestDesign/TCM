@@ -1,4 +1,5 @@
 .contacts {
+    
     &__c {
         display: grid;
         grid-template-columns: auto 50rem;
@@ -9,6 +10,20 @@
             grid-template-columns: 100%;
             padding-top: 10rem;
             border: none;
+        }
+        & .input-text-error{
+            color: $gray-main !important;
+        }
+        & .input-text._error .input-text-input input{
+            color: $gray-main !important;
+            border-color: $gray-main !important;
+            &::placeholder{
+                color: $gray-main !important;
+            }
+
+        }
+        & .checkbox._error{
+            color: $gray-main !important;
         }
 
         &-cell {
