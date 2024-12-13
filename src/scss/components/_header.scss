@@ -136,6 +136,14 @@
         &-nav {
             display: flex;
             height: 100%;
+            & .btn-header{
+                @include desktop{
+                    border-right: none;
+                    &:last-of-type{
+                        border-right: .2rem solid #dfdfdf;
+                    }
+                }
+            }
 
         }
 

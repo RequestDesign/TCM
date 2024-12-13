@@ -63,6 +63,15 @@
 
         &-nav {
             display: flex;
+            @include desktop{
+                & .btn-green{
+                    border-right: none;
+                    &:last-of-type{
+                        border-right: .2rem solid #dfdfdf;
+                    }
+                }
+               
+            }
 
         }
 

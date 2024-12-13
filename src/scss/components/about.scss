@@ -36,8 +36,10 @@
                     }
                     &:last-of-type{
                         @include desktop {
+                            transform: translateX(-1rem);
                             & .txt18 {
-                               padding-left: 2rem;
+                               padding-left: 1rem;
+                              
                             }
                         }
                     }
@@ -45,11 +47,13 @@
                     & .txt18 {
                         text-transform: lowercase;
                         display: flex;
+                        
 
                        
 
                         @include small-tablet {
                             font-size: 3rem;
+                            justify-content: center;
                             & span {
                                 width: 1rem;
                             }
