@@ -21,6 +21,15 @@
             justify-content: center;
             align-items: center;
             gap: 3rem;
+
+            & div.mobile {
+                gap: 2rem;
+                & a {
+                    display: flex;
+                    gap: 1rem;
+                    align-items: center;
+                }
+            }
         }
 
 
@@ -63,14 +72,16 @@
 
         &-nav {
             display: flex;
-            @include desktop{
-                & .btn-green{
+
+            @include desktop {
+                & .btn-green {
                     border-right: none;
-                    &:last-of-type{
+
+                    &:last-of-type {
                         border-right: .2rem solid #dfdfdf;
                     }
                 }
-               
+
             }
 
         }

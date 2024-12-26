@@ -42,7 +42,8 @@
 
 
         }
-        & .tl2{
+
+        & .tl2 {
             text-transform: uppercase;
         }
 
@@ -99,6 +100,17 @@
 
                 @include small-tablet {
                     justify-self: center;
+
+                }
+            }
+
+            & a.contact-us__c-form-toleft {
+                @include small-tablet {
+                    margin-bottom: 0;
+
+                    &+a {
+                        padding-right: 5.1rem;
+                    }
                 }
             }
 
