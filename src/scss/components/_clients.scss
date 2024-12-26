@@ -12,17 +12,18 @@
       display: flex;
       width: 27rem;
       height: 10rem;
-      align-items: center;
-      justify-content: center;
+
 
       @include small-tablet {
         height: 9rem;
       }
 
       & img {
-        max-height: 100%;
-        max-width: 100%;
-
+        object-fit: contain;
+        object-position: center;
+        filter: grayscale(1);
+        -webkit-transform: translateZ(0);
+        -webkit-backface-visibility: hidden;
       }
     }
   }

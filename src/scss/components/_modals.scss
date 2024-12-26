@@ -1,16 +1,17 @@
 .modal {
-       display: none;
+    display: none;
     position: fixed;
     background: rgba(27, 27, 27, 0.4);
     backdrop-filter: blur(1rem);
-    &._opened{
-        & .modal-c{
+
+    &._opened {
+        & .modal-c {
             transform: translateY(0);
         }
     }
 
     &-wrp {
-      
+
         display: flex;
         align-items: center;
         justify-content: center;
@@ -139,7 +140,8 @@
             gap: 1rem 2.4rem;
             grid-auto-rows: auto;
             min-width: 124rem;
-            @include small-tablet{
+
+            @include small-tablet {
                 grid-template-columns: 100%;
                 min-width: auto;
                 width: 100%;
@@ -151,50 +153,66 @@
                     grid-column: 1 / span 2;
                 }
             }
-            &-toright{
-                @include desktop{
+
+            &-toright {
+                @include desktop {
                     justify-self: flex-end;
                 }
-              
+
+                @include mobile {
+                    &+a {
+                        padding-right: 3rem;
+                    }
+                }
+
             }
-            & .modal-ttl{
+
+            & .modal-ttl {
                 margin-top: 0;
             }
-           
-            & .modal-txt{
+
+            & .modal-txt {
                 margin-bottom: 4rem;
             }
-            & input{
+
+            & input {
                 border-color: $gray;
                 color: $gray;
-                &::placeholder{
+
+                &::placeholder {
                     color: $gray;
                 }
             }
-            & button[type='submit']{
+
+            & button[type='submit'] {
                 border-color: $gray;
                 margin-bottom: 5rem;
-                @include small-tablet{
+
+                @include small-tablet {
                     width: 100%;
                     justify-content: center;
                 }
-                & svg{
-                   transition: stroke .5s;
+
+                & svg {
+                    transition: stroke .5s;
                 }
-                &:hover svg{
+
+                &:hover svg {
                     stroke: $black;
                 }
             }
-            & .checkbox{
+
+            & .checkbox {
                 align-self: center;
                 margin-bottom: 4rem;
             }
-            & .flex-row{
-                @include small-tablet{
+
+            & .flex-row {
+                @include small-tablet {
                     justify-content: center;
                 }
             }
-            
+
         }
     }
 
