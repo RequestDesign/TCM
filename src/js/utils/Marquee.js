@@ -50,7 +50,6 @@ export default class Marquee {
 
         }
         setTimeout(() => {
-            console.log('timing');
              this._list.style.transition = `transform 0s linear`
             if (this._isReverse) {
                 this._list.style.transform = `translateX(-${this._maxTranslate}px)`

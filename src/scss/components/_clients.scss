@@ -6,6 +6,10 @@
 
   &-list {
     display: flex;
+    gap: 2rem;
+    &+.clients-list{
+      margin-top: 2rem;
+    }
 
     & li {
       flex-shrink: 0;
