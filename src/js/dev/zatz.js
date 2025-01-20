@@ -1,6 +1,6 @@
 import $ from 'jquery'
 import Swiper from 'swiper'
-import { Grid, Navigation, Pagination, Autoplay, EffectFade } from 'swiper/modules'
+import { Grid, Navigation, Mousewheel, Pagination, Autoplay, EffectFade } from 'swiper/modules'
 import { rem } from '../utils/constants'
 import initForms from '../utils/forms'
 import { Fancybox } from '@fancyapps/ui'
@@ -44,8 +44,9 @@ function initSwipers() {
     if (ourProjects) {
         new Swiper(ourProjects.querySelector('.swiper'), {
             loop: true,
-            modules: [Navigation],
+            modules: [Navigation, Mousewheel],
             slidesPerView: 1.15,
+            mousewheel: true,
             centeredSlides: true,
             initialSlide: 3,
             spaceBetween: rem(3),
